@@ -26,7 +26,7 @@ export const getMainHeader = async (): Promise<string> => {
         const response = await getApi<{ text: string }>('headerText');
         return response.text;
     } catch (e) {
-        throw new Error(e)
+        return `server error ${e}`
     }
 };
 
