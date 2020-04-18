@@ -1,0 +1,51 @@
+@import "../../css/globalStyles.css";
+
+.topContainer {
+    display: flex;
+    background-color: var(--primaryColor);
+    padding: 20px;
+}
+
+.headerText {
+    color: var(--secondaryLight);
+    text-align: center;
+    font-family: Rubic-cust, monospace;
+    font-size: 50pt;
+    line-height: 70px;
+    margin: 0;
+}
+
+.todosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.todoContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    align-items: center;
+}
+
+.checkBox {
+    display: flex;
+    width: 28px;
+    height: 28px;
+}
+
+.todoInput {
+    margin-left: 4px;
+    padding: 4px 8px;
+    resize: horizontal;
+    background-color: var(--primaryLight);
+    color: var(--secondaryColor);
+    border: none;
+    border-radius: 8px;
+    font-family: Rubic-cust, monospace;
+    font-size: 12pt;
+}
+
+
+

@@ -1,0 +1,22 @@
+.topContainer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primaryColor);
+    padding: 20px;
+}
+
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerText {
+    color: var(--secondaryLight);
+    text-align: center;
+    font-family: Rubic-cust, monospace;
+    font-size: 50pt;
+    line-height: 70px;
+    margin: 0;
+}

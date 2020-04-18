@@ -1,0 +1,33 @@
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.buttonContainer {
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    max-height: 100px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.buttonContainer:hover {
+    background-color: var(--secondaryLight);
+}
+
+.buttonText {
+    font-family: Rubic-cust, monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 14pt;
+    line-height: 8px;
+    text-align: center;
+    color: var(--textWhite);
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
