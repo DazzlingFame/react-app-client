@@ -2,11 +2,13 @@ import React, {ChangeEvent} from "react";
 import './sandBoxStyles.css'
 import {Button} from "../../components/button";
 import {getRandomInt} from "../../utils/global";
+import {getTodos} from "../../utils/api";
+import {Loader} from "../../components/loader";
 
-type TodoType = {
+export type TodoType = {
     id: number;
-    checked: boolean;
     text: string;
+    checked: boolean;
 }
 
 type PropsType = {
@@ -14,6 +16,7 @@ type PropsType = {
 }
 
 type StateType = {
+    isLoading: boolean
     todoData: Array<TodoType>
 }
 
@@ -23,7 +26,20 @@ export class SandBox extends React.Component<PropsType, StateType> {
 
         this.state = {
             todoData: [],
+            isLoading: false,
         }
+    }
+
+    componentDidMount(): void {
+        this.setState({
+            isLoading: true,
+        });
+        getTodos().then((response) => {
+            this.setState({
+                todoData: response,
+                isLoading: false,
+            })
+        })
     }
 
     onCheckBoxClick = (id: number) => {
@@ -64,11 +80,13 @@ export class SandBox extends React.Component<PropsType, StateType> {
     };
 
     render() {
+        const {isLoading} = this.state;
         const todos = this.state.todoData.map(item => this.makeCheckBox(item));
         return (
             <div className={'topContainer'}>
                 <p className={'headerText'}>CheckList</p>
-                {!!todos.length &&
+                {isLoading && <Loader/>}
+                {!!todos.length && !isLoading &&
                 <div className={'todosContainer'}>
                     {todos}
                 </div>
