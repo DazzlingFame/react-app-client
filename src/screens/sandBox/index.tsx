@@ -2,7 +2,7 @@ import React, {ChangeEvent} from "react";
 import './sandBoxStyles.css'
 import {Button} from "../../components/button";
 import {getRandomInt} from "../../utils/global";
-import {getTodos} from "../../utils/api";
+import {getTodos, setTodos} from "../../utils/api";
 import {Loader} from "../../components/loader";
 
 export type TodoType = {
@@ -21,6 +21,8 @@ type StateType = {
 }
 
 export class SandBox extends React.Component<PropsType, StateType> {
+    timeout: ReturnType<typeof setTimeout> | undefined;
+
     constructor(props: PropsType) {
         super(props);
 
@@ -50,7 +52,8 @@ export class SandBox extends React.Component<PropsType, StateType> {
         todosArray[currentIndex].checked = !todosArray[currentIndex].checked;
         this.setState({
             todoData: [...todosArray],
-        })
+        });
+        todosArray && setTodos({todosArray: todosArray});
     };
 
     onTextChanged = (event: ChangeEvent<HTMLInputElement>, id: number) => {
@@ -61,7 +64,13 @@ export class SandBox extends React.Component<PropsType, StateType> {
         todosArray[currentIndex].text = event.target.value;
         this.setState({
             todoData: [...todosArray],
-        })
+        });
+        if (this.timeout) {
+            clearTimeout(this.timeout);
+        }
+        this.timeout = setTimeout(() => {
+            todosArray && setTodos({todosArray: todosArray});
+        }, 500)
     };
 
     makeCheckBox = (item: TodoType) => {

@@ -45,3 +45,8 @@ export const getTodos = async (): Promise<Array<TodoType>> => {
         return [{id: 0, text: `server error ${e}`, checked: false}]
     }
 };
+
+export const setTodos = async (param: {todosArray: Array<TodoType>}): Promise<Array<TodoType>> => {
+    const response = await postApi<{todos: Array<TodoType>}>('setTodos', {param});
+    return response.todos;
+};
