@@ -84,7 +84,7 @@ export class SandBox extends React.Component<PropsType, StateType> {
 
     addEmptyTodo = () => {
         this.setState({
-            todoData: [...this.state.todoData, {id: getRandomInt(1000),checked: false, text: ''}]
+            todoData: [...this.state.todoData, {id: getRandomInt(1000), text: '', checked: false}]
         })
     };
 
