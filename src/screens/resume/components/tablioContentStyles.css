@@ -1,0 +1,25 @@
+.tablio_content_container {
+    padding: 20px 0;
+}
+
+.tablio_content_header_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tablio_content_logo {
+    width: 20%;
+    margin-right: 20px;
+
+}
+
+.tablio_content_logo {
+}
+
+.tablio_content_photos_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}

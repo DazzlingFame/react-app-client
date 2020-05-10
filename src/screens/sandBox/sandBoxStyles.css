@@ -9,7 +9,7 @@
 .headerText {
     color: var(--secondaryLight);
     text-align: center;
-    font-family: Rubic-cust, monospace;
+    font-family: Rubic-bold, monospace;
     font-size: 50pt;
     line-height: 70px;
     margin: 0;
@@ -43,7 +43,7 @@
     color: var(--secondaryColor);
     border: none;
     border-radius: 8px;
-    font-family: Rubic-cust, monospace;
+    font-family: Rubic-bold, monospace;
     font-size: 12pt;
 }
 

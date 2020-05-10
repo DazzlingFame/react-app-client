@@ -44,6 +44,15 @@ export class SandBox extends React.Component<PropsType, StateType> {
         })
     }
 
+    async componentWillUnmount(): Promise<void> {
+        const {todoData} = this.state;
+        const undone: Array<TodoType> = [];
+        todoData.forEach(item => {
+            !item.checked && undone.push(item);
+        });
+        await setTodos({todosArray: undone});
+    }
+
     onCheckBoxClick = (id: number) => {
         const todosArray = this.state.todoData;
         const currentIndex = todosArray.findIndex((element) => {

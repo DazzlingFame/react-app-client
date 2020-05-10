@@ -6,20 +6,20 @@
 }
 
 .buttonContainer {
-    background-color: var(--secondaryColor);
-    border-radius: 10px;
-    max-height: 100px;
-    margin-left: 16px;
-    margin-right: 16px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
+     background-color: var(--secondaryColor);
+     border-radius: 10px;
+     max-height: 100px;
+     margin-left: 16px;
+     margin-right: 16px;
+     padding-left: 8px;
+     padding-right: 8px;
+ }
 .buttonContainer:hover {
     background-color: var(--secondaryLight);
 }
 
 .buttonText {
-    font-family: Rubic-cust, monospace;
+    font-family: Rubic-bold, monospace;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;

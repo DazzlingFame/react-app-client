@@ -3,6 +3,7 @@ import {Button} from "../../components/button";
 import './mainScreenStyles.css'
 import {Loader} from "../../components/loader";
 import {getMainHeader, getMainPost} from "../../utils/api";
+import {LOADER_ROUTE, RESUME_ROUTE, SANDBOX_ROUTE} from "../../App";
 
 type PropsType = {
 
@@ -53,8 +54,9 @@ export class MainScreen extends React.PureComponent<PropsType, StateType> {
                     <div className={'bodyContainer'}>
                         <p className={'headerText'}>{this.state.apiText || 'MAIN'}</p>
                         <div className={'buttonsContainer'}>
-                            <Button text={'SANDBOX'} onClick={() => window.open('/sandbox', '_parent')}/>
-                            <Button text={'LOADER'} onClick={() => window.open('/loader', '_parent')}/>
+                            <Button text={'SANDBOX'} onClick={() => window.open(SANDBOX_ROUTE, '_parent')}/>
+                            <Button text={'LOADER'} onClick={() => window.open(LOADER_ROUTE, '_parent')}/>
+                            <Button text={'RESUME'} onClick={() => window.open(RESUME_ROUTE, '_parent')}/>
                         </div>
                     </div>
                 }
