@@ -62,6 +62,13 @@
 
 .navigation_link_container {
     padding: 4px 24px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.navigation_link_container:hover {
+    background-color: rgba(40, 40, 40, 0.2);
 }
 
 .small_text {

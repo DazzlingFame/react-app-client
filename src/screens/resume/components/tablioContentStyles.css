@@ -5,15 +5,13 @@
 .tablio_content_header_container {
     display: flex;
     flex-direction: row;
+    justify-content: start;
 }
 
 .tablio_content_logo {
     width: 20%;
     margin-right: 20px;
-
-}
-
-.tablio_content_logo {
+    object-fit: contain;
 }
 
 .tablio_content_photos_container {
