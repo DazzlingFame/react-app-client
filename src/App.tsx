@@ -6,10 +6,12 @@ import {Loader} from "./components/loader";
 import './css/variables.css'
 import './css/font.css'
 import {Resume} from "./screens/resume";
+import {MapScreen} from "./screens/map";
 
 export const SANDBOX_ROUTE = '/sandbox';
 export const LOADER_ROUTE = '/loader';
 export const RESUME_ROUTE = '/resume';
+export const MAP_ROUTE = '/map';
 
 
 function App () {
@@ -23,6 +25,9 @@ function App () {
                     </Route>
                     <Route path={RESUME_ROUTE}>
                         <Resume />
+                    </Route>
+                    <Route path={MAP_ROUTE}>
+                        <MapScreen/>
                     </Route>
                     <Route path="/">
                         <MainScreen />

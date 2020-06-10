@@ -2,7 +2,7 @@ import React from "react";
 import {Button} from "../../components/button";
 import './mainScreenStyles.css'
 import {Loader} from "../../components/loader";
-import {getMainHeader, getMainPost} from "../../utils/api";
+import {getMainHeader} from "../../utils/api";
 import {LOADER_ROUTE, RESUME_ROUTE, SANDBOX_ROUTE} from "../../App";
 
 type PropsType = {
