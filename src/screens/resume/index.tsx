@@ -12,17 +12,21 @@ type StateType = {
 }
 
 export class Resume extends React.PureComponent<PropsType, StateType> {
+    workRef: React.RefObject<HTMLDivElement> | null;
     aboutRef: React.RefObject<HTMLDivElement> | null;
+
     constructor(props: PropsType) {
         super(props);
+        this.workRef = React.createRef<HTMLDivElement>();
         this.aboutRef = React.createRef<HTMLDivElement>();
     }
 
     headerLinksConfig: Array<{text: string; onClick: () => void}> = [
-        {text: 'Work', onClick: () => alert('work')},
+        {text: 'Work', onClick: () => {
+                this.workRef?.current && this.workRef.current.scrollIntoView({behavior: "smooth", block: "start"});
+        }},
         {text: 'About', onClick: () => {
-            console.log('!', this.aboutRef, this.aboutRef?.current?.offsetTop);
-            this.aboutRef?.current && window.scrollTo({top: this.aboutRef.current.offsetTop});
+                this.aboutRef?.current && this.aboutRef.current.scrollIntoView({behavior: "smooth", block: "start"});
             }}
     ];
 
@@ -49,8 +53,10 @@ export class Resume extends React.PureComponent<PropsType, StateType> {
                     <p className={'bold_header_text'}>
                         Welcome to my portfoolio
                     </p>
-                    <WorkContent />
-                    <div ref={this.aboutRef} style={{backgroundColor: "red"}}>
+                    <div ref={this.workRef}>
+                        <WorkContent />
+                    </div>
+                    <div ref={this.aboutRef}>
                         <AboutContent />
                     </div>
                 </div>
