@@ -4,11 +4,14 @@ import {selectedContentLinkStyle} from "../../constants";
 import '../../resumeScreenStyles.css'
 import {TablioContent} from "./components/tablioContent";
 
-type ContentType = 'Tablio' | 'PhotoEditing';
+enum ContentType {
+    TABLIO = 'Tablio',
+    PHOTO_EDITING = 'PhotoEditing'
+}
 
 const navigationConfig: Array<{text: string; type: ContentType}> = [
-    {text: 'Tablio', type: "Tablio"},
-    {text: 'Photo Editing', type: "PhotoEditing"},
+    {text: 'Tablio', type: ContentType.TABLIO},
+    {text: 'Photo Editing', type: ContentType.PHOTO_EDITING},
 ];
 
 export const WorkContent: React.FC = () => {
@@ -24,11 +27,11 @@ export const WorkContent: React.FC = () => {
     ));
 
     switch (content) {
-        case "PhotoEditing": {
+        case ContentType.PHOTO_EDITING: {
             contentComponent = <p>{'weqwe'}</p>;
             break;
         }
-        case "Tablio": {
+        case ContentType.TABLIO: {
             contentComponent = <TablioContent />;
             break;
         }
@@ -50,4 +53,4 @@ export const WorkContent: React.FC = () => {
              </div>
          </div>
     )
-}
+};

@@ -1,17 +1,13 @@
-import React, {RefObject} from "react";
+import React from "react";
 import './resumeScreenStyles.css'
 import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
-
 
 type PropsType = {
 
 }
 
-type StateType = {
-}
-
-export class Resume extends React.PureComponent<PropsType, StateType> {
+export class Resume extends React.PureComponent<PropsType> {
     workRef: React.RefObject<HTMLDivElement> | null;
     aboutRef: React.RefObject<HTMLDivElement> | null;
 

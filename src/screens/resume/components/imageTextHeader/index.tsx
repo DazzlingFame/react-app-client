@@ -6,12 +6,11 @@ type PropsType = {
     imageSource: string;
     header?: string;
     text: string;
-    roundImage?: boolean;
 }
 
 export const ImageTextHeader: React.FC<PropsType> = (props: PropsType) => (
     <div className={'header_container'}>
-        <img src={props.imageSource} alt={'doge'} className={'logo'} style={props.roundImage ? {borderRadius: '50%'} : undefined}/>
+        <img src={props.imageSource} alt={'doge'} className={'logo'}/>
         <div style={{flexDirection: 'column'}}>
             {props.header && (
                 <p className={'small_text'}> {props.header} </p>
