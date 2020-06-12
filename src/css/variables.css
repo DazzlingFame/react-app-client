@@ -13,4 +13,12 @@
     --subHeader: 30pt;
     --regular: 20pt;
     --small: 15pt;
+
+    /* viewport */
+    --mobile-to-desktop-boundary: 980px;
+    --desktop-width: 1280px;
+    --tablet-width: 1020px;
+    --mobile-width: 720px;
+    --min-width: 320px;
+    --iphone6-width: 375px;
 }

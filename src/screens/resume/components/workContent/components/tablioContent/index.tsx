@@ -3,6 +3,7 @@ import logo from '../../../../../../assets/images/doge.jpg';
 import dogePillow from '../../../../../../assets/images/dogePillow.jpg';
 import './tablioContentStyles.css'
 import {DOGE_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG, TABLIO_TEXT} from "./constants";
+import {ImageTextHeader} from "../../../imageTextHeader";
 
 const photosArray: Array<{source: string, desc: string}> = [
     DOGE_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG, DOGE_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG
@@ -15,12 +16,7 @@ export const TablioContent: React.FC = () => {
 
     return (
         <div className={'tablio_content_container'}>
-            <div className={'tablio_content_header_container'}>
-                <img src={dogePillow} alt={'doge'} className={'tablio_content_logo'}/>
-                <p className={'small_text'}>
-                    {TABLIO_TEXT}
-                </p>
-            </div>
+            <ImageTextHeader imageSource={dogePillow} text={TABLIO_TEXT}/>
             <div className={'tablio_content_photos_container'}>
                 <img src={logo} alt={'bigDoge'} style={{width: '80%', marginRight: 20, marginTop: 20}}/>
                 {photos}
