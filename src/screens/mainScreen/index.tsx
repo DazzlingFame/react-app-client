@@ -3,7 +3,7 @@ import {Button} from "../../components/button";
 import './mainScreenStyles.css'
 import {Loader} from "../../components/loader";
 import {getMainHeader} from "../../utils/api";
-import {LOADER_ROUTE, RESUME_ROUTE, SANDBOX_ROUTE} from "../../App";
+import {LOADER_ROUTE, MAP_ROUTE, RESUME_ROUTE, SANDBOX_ROUTE} from "../../App";
 
 type PropsType = {
 
@@ -57,6 +57,7 @@ export class MainScreen extends React.PureComponent<PropsType, StateType> {
                             <Button text={'SANDBOX'} onClick={() => window.open(SANDBOX_ROUTE, '_parent')}/>
                             <Button text={'LOADER'} onClick={() => window.open(LOADER_ROUTE, '_parent')}/>
                             <Button text={'RESUME'} onClick={() => window.open(RESUME_ROUTE, '_parent')}/>
+                            <Button text={'MAP'} onClick={() => window.open(MAP_ROUTE, '_parent')}/>
                         </div>
                     </div>
                 }

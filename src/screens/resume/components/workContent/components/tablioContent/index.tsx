@@ -1,6 +1,6 @@
 import React from "react";
-import logo from '../../../assets/images/doge.jpg';
-import dogePillow from '../../../assets/images/dogePillow.jpg';
+import logo from '../../../../../../assets/images/doge.jpg';
+import dogePillow from '../../../../../../assets/images/dogePillow.jpg';
 import './tablioContentStyles.css'
 import {DOGE_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG, TABLIO_TEXT} from "./constants";
 
