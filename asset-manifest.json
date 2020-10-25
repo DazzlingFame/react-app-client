@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/React-app-client/static/css/main.c37ac207.chunk.css",
+    "main.js": "/React-app-client/static/js/main.0a2d6c59.chunk.js",
+    "main.js.map": "/React-app-client/static/js/main.0a2d6c59.chunk.js.map",
+    "runtime-main.js": "/React-app-client/static/js/runtime-main.3b3062d9.js",
+    "runtime-main.js.map": "/React-app-client/static/js/runtime-main.3b3062d9.js.map",
+    "static/js/2.19098fe6.chunk.js": "/React-app-client/static/js/2.19098fe6.chunk.js",
+    "static/js/2.19098fe6.chunk.js.map": "/React-app-client/static/js/2.19098fe6.chunk.js.map",
+    "index.html": "/React-app-client/index.html",
+    "precache-manifest.4bba9f2ce6a9c91fb53fdbec4431d2c5.js": "/React-app-client/precache-manifest.4bba9f2ce6a9c91fb53fdbec4431d2c5.js",
+    "service-worker.js": "/React-app-client/service-worker.js",
+    "static/css/main.c37ac207.chunk.css.map": "/React-app-client/static/css/main.c37ac207.chunk.css.map",
+    "static/js/2.19098fe6.chunk.js.LICENSE.txt": "/React-app-client/static/js/2.19098fe6.chunk.js.LICENSE.txt",
+    "static/media/font.css": "/React-app-client/static/media/Rubik-Regular.b3d0902b.ttf",
+    "static/media/doge.jpg": "/React-app-client/static/media/doge.967012b8.jpg",
+    "static/media/dogePillow.jpg": "/React-app-client/static/media/dogePillow.9de42fb7.jpg",
+    "static/media/dogeSmiling.jpg": "/React-app-client/static/media/dogeSmiling.a36755e1.jpg",
+    "static/media/logo.svg": "/React-app-client/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b3062d9.js",
+    "static/js/2.19098fe6.chunk.js",
+    "static/css/main.c37ac207.chunk.css",
+    "static/js/main.0a2d6c59.chunk.js"
+  ]
+}
