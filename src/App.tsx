@@ -10,7 +10,7 @@ import {MapScreen} from "./screens/map";
 
 export const SANDBOX_ROUTE = '/sandbox';
 export const LOADER_ROUTE = '/loader';
-export const RESUME_ROUTE = '/resume';
+export const RESUME_ROUTE = '/react-app-client/resume';
 export const MAP_ROUTE = '/map';
 
 
