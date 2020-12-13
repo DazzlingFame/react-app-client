@@ -13,11 +13,11 @@ export const ImageTextHeader: React.FC<PropsType> = (props: PropsType) => (
         <img src={props.imageSource} alt={'doge'} className={'logo'}/>
         <div style={{flexDirection: 'column'}}>
             {props.header && (
-                <p className={'small_text'}> {props.header} </p>
+                <text className={'small_text image_header_text'}> {props.header} <br/> </text>
             )}
-            <p className={'small_text'}>
+            <text className={'small_text image_header_text'}>
                 {props.text}
-            </p>
+            </text>
         </div>
     </div>
 );

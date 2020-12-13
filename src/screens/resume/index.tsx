@@ -10,11 +10,13 @@ type PropsType = {
 export class Resume extends React.PureComponent<PropsType> {
     workRef: React.RefObject<HTMLDivElement> | null;
     aboutRef: React.RefObject<HTMLDivElement> | null;
+    contactsRef: React.RefObject<HTMLDivElement> | null;
 
     constructor(props: PropsType) {
         super(props);
         this.workRef = React.createRef<HTMLDivElement>();
         this.aboutRef = React.createRef<HTMLDivElement>();
+        this.contactsRef = React.createRef<HTMLDivElement>();
     }
 
     headerLinksConfig: Array<{text: string; onClick: () => void}> = [
@@ -23,6 +25,9 @@ export class Resume extends React.PureComponent<PropsType> {
         }},
         {text: 'About', onClick: () => {
                 this.aboutRef?.current && this.aboutRef.current.scrollIntoView({behavior: "smooth", block: "start"});
+            }},
+        {text: 'Contacts', onClick: () => {
+                this.contactsRef?.current && this.contactsRef.current.scrollIntoView({behavior: "smooth", block: "start"});
             }}
     ];
 
@@ -47,13 +52,18 @@ export class Resume extends React.PureComponent<PropsType> {
                         </div>
                     </div>
                     <p className={'bold_header_text'}>
-                        Welcome to my portfoolio
+                        Welcome to my resume
                     </p>
                     <div ref={this.workRef}>
                         <WorkContent />
                     </div>
                     <div ref={this.aboutRef}>
                         <AboutContent />
+                    </div>
+                    <div ref={this.contactsRef}>
+                        <p>
+                            Contacts
+                        </p>
                     </div>
                 </div>
             </div>

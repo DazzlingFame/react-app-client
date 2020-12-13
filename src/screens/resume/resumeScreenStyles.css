@@ -7,8 +7,9 @@
 
 .root_container::after {
     content: '';
-    opacity: 0.8;
-    background: rgb(50,50,50) url("../../assets/images/doge.jpg") no-repeat fixed top;
+    /*opacity: 0.8;*/
+    /*background: rgb(50,50,50) url("../../assets/images/doge.jpg") no-repeat fixed top;*/
+    background-color: var(--primaryDark);
     background-blend-mode: overlay;
     background-size: cover;
     top: 0;
@@ -58,6 +59,7 @@
 
 .header_link_container {
     margin-right: 16px;
+    color: var(--secondaryColor);
 }
 
 .navigation_container {
@@ -75,6 +77,13 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
+}
+
+.navigation_link_container_selected {
+    border-color: var(--secondaryColor);
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-width: 0;
 }
 
 .navigation_link_container:hover {

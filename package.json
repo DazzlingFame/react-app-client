@@ -1,5 +1,6 @@
 {
   "name": "dazzling_fame_react",
+  "homepage": "http://DazzlingFame.github.io/react-app-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "redeps": "rm -rf node_modules && yarn"
+    "redeps": "rm -rf node_modules && yarn",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,7 +44,8 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.3"
+    "@types/react-router-dom": "^5.1.3",
+    "gh-pages": "^3.1.0"
   },
   "proxy": "http://localhost:8000/"
 }

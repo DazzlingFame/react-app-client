@@ -1,6 +1,5 @@
 import {Divider} from "../../../../components/divider";
 import React, {useState} from "react";
-import {selectedContentLinkStyle} from "../../constants";
 import '../../resumeScreenStyles.css'
 import {TablioContent} from "./components/tablioContent";
 
@@ -19,7 +18,7 @@ export const WorkContent: React.FC = () => {
     let contentComponent = null;
 
     const navigationLinks = navigationConfig.map(item => (
-        <div className={'navigation_link_container'} onClick={() => setContent(item.type)} style={ content === item.type ? selectedContentLinkStyle : undefined}>
+        <div className={content === item.type ?  'navigation_link_container navigation_link_container_selected' : 'navigation_link_container'} onClick={() => setContent(item.type)}>
             <p className={'small_text'}>
                 {item.text}
             </p>

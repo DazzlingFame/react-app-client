@@ -13,4 +13,4 @@ export const AboutContent: React.FC = () => {
             <ImageTextHeader header={ABOUT_HEADER} text={ABOUT_TEXT} imageSource={dogeSmiling}/>
         </div>
     )
-}
+};

@@ -1,7 +1,6 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import {SandBox} from "./screens/sandBox";
-import {MainScreen} from "./screens/mainScreen";
 import {Loader} from "./components/loader";
 import './css/variables.css'
 import './css/font.css'
@@ -30,7 +29,7 @@ function App () {
                         <MapScreen/>
                     </Route>
                     <Route path="/">
-                        <MainScreen />
+                        <Resume />
                     </Route>
                 </Switch>
         );
