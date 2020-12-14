@@ -3,38 +3,56 @@ import './resumeScreenStyles.css'
 import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
 import {getLocalisedTexts, LocaleEnum} from "../../utils/localisation";
-import {multiLanguageTexts} from "./constants";
+import {HeaderLinksText, multiLanguageTexts} from "./constants";
 
-type PropsType = {
+type Props = {
 
 }
 
-export class Resume extends React.PureComponent<PropsType> {
+type State = {
+    locale: LocaleEnum;
+}
+
+export class Resume extends React.PureComponent<Props, State> {
     workRef: React.RefObject<HTMLDivElement> | null;
     aboutRef: React.RefObject<HTMLDivElement> | null;
     contactsRef: React.RefObject<HTMLDivElement> | null;
 
-    constructor(props: PropsType) {
+    constructor(props: Props) {
         super(props);
         this.workRef = React.createRef<HTMLDivElement>();
         this.aboutRef = React.createRef<HTMLDivElement>();
         this.contactsRef = React.createRef<HTMLDivElement>();
+
+        this.state = {
+            locale: LocaleEnum.en,
+        }
     }
 
-    headerLinksConfig: Array<{text: string; onClick: () => void}> = [
-        {text: 'Work', onClick: () => {
+    getHeaderLinksConfig = ({work, about, contacts}: HeaderLinksText) => ([
+        {text: work, onClick: () => {
                 this.workRef?.current && this.workRef.current.scrollIntoView({behavior: "smooth", block: "start"});
         }},
-        {text: 'About', onClick: () => {
+        {text: about, onClick: () => {
                 this.aboutRef?.current && this.aboutRef.current.scrollIntoView({behavior: "smooth", block: "start"});
             }},
-        {text: 'Contacts', onClick: () => {
+        {text: contacts, onClick: () => {
                 this.contactsRef?.current && this.contactsRef.current.scrollIntoView({behavior: "smooth", block: "start"});
+            }},
+        {text: 'RU', onClick: () => {
+                this.setState({
+                    locale: LocaleEnum.ru,
+                })
+            }},
+        {text: 'EN', onClick: () => {
+                this.setState({
+                    locale: LocaleEnum.en,
+                })
             }}
-    ];
+    ]);
 
     render() {
-        const headerLinks = this.headerLinksConfig.map(item => (
+        const headerLinks = this.getHeaderLinksConfig(getLocalisedTexts(multiLanguageTexts.headerLinks, this.state.locale)).map(item => (
             <div className={'header_link_container'} onClick={item.onClick}>
                 <p className={'regular_text'}>
                     {item.text}
@@ -60,7 +78,7 @@ export class Resume extends React.PureComponent<PropsType> {
                         <WorkContent />
                     </div>
                     <div ref={this.aboutRef}>
-                        <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, LocaleEnum.ru)}/>
+                        <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, this.state.locale)}/>
                     </div>
                     <div ref={this.contactsRef}>
                         <p>
