@@ -2,6 +2,8 @@ import React from "react";
 import './resumeScreenStyles.css'
 import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
+import {getLocalisedTexts, LocaleEnum} from "../../utils/localisation";
+import {multiLanguageTexts} from "./constants";
 
 type PropsType = {
 
@@ -58,7 +60,7 @@ export class Resume extends React.PureComponent<PropsType> {
                         <WorkContent />
                     </div>
                     <div ref={this.aboutRef}>
-                        <AboutContent />
+                        <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, LocaleEnum.ru)}/>
                     </div>
                     <div ref={this.contactsRef}>
                         <p>

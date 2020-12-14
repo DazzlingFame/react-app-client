@@ -2,15 +2,24 @@ import '../../resumeScreenStyles.css'
 import * as React from "react";
 import {ImageTextHeader} from "../imageTextHeader";
 import dogeSmiling from "../../../../assets/images/dogeSmiling.jpg"
-import {ABOUT_HEADER, ABOUT_TEXT} from "./constants";
 
-export const AboutContent: React.FC = () => {
+export type AboutTexts = {
+    sectionName: string,
+    header: string,
+    text: string,
+}
+
+type Props = {
+    texts: AboutTexts;
+}
+
+export const AboutContent: React.FC<Props> = props => {
     return (
         <div>
             <p className={'bold_subheader_text'}>
-                About
+                {props.texts.sectionName}
             </p>
-            <ImageTextHeader header={ABOUT_HEADER} text={ABOUT_TEXT} imageSource={dogeSmiling}/>
+            <ImageTextHeader header={props.texts.header} text={props.texts.text} imageSource={dogeSmiling}/>
         </div>
     )
 };
