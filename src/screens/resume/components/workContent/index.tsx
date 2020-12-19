@@ -1,21 +1,26 @@
 import {Divider} from "../../../../components/divider";
 import React, {useState} from "react";
 import '../../resumeScreenStyles.css'
-import {TablioContent} from "./components/tablioContent";
+import WorkBlock from "./components";
+import {WorkTexts} from "../../constants";
 
 enum ContentType {
     TABLIO = 'Tablio',
     PHOTO_EDITING = 'PhotoEditing'
 }
 
-const navigationConfig: Array<{text: string; type: ContentType}> = [
-    {text: 'Tablio', type: ContentType.TABLIO},
-    {text: 'Photo Editing', type: ContentType.PHOTO_EDITING},
-];
+type Props = {
+    texts: WorkTexts;
+}
 
-export const WorkContent: React.FC = () => {
+export const WorkContent: React.FC<Props> = props => {
     const [content, setContent] = useState('Tablio');
     let contentComponent = null;
+
+    const navigationConfig: Array<{text: string; type: ContentType}> = [
+        {text: props.texts.testing.header, type: ContentType.TABLIO},
+        {text: props.texts.development.header, type: ContentType.PHOTO_EDITING},
+    ];
 
     const navigationLinks = navigationConfig.map(item => (
         <div className={content === item.type ?  'navigation_link_container navigation_link_container_selected' : 'navigation_link_container'} onClick={() => setContent(item.type)}>
@@ -27,11 +32,11 @@ export const WorkContent: React.FC = () => {
 
     switch (content) {
         case ContentType.PHOTO_EDITING: {
-            contentComponent = <p>{'weqwe'}</p>;
+            contentComponent = <WorkBlock texts={props.texts.development} />;
             break;
         }
         case ContentType.TABLIO: {
-            contentComponent = <TablioContent />;
+            contentComponent = <WorkBlock texts={props.texts.testing} />;
             break;
         }
     }
@@ -39,7 +44,7 @@ export const WorkContent: React.FC = () => {
     return (
          <div>
              <p className={'bold_subheader_text'}>
-                 Work
+                 {props.texts.header}
              </p>
              <div className={'navigation_container'}>
                  <div className={'navigation_links_container'}>

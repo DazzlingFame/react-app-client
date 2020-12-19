@@ -7,23 +7,50 @@ export type HeaderLinksText = {
     contacts: string,
 }
 
+export type WorkTexts = {
+    header: string;
+    testing: TestingTexts;
+    development: TestingTexts;
+}
+
+export type TestingTexts = {
+    header: string,
+    mainData: string;
+    skills: string;
+}
+
+export type MainTexts = {
+    header: string;
+    headerLinks: HeaderLinksText;
+    welcome: string;
+}
+
 type MultiLanguageTexts = {
-    headerLinks: TextWithTranslation<HeaderLinksText>
+    mainTexts: TextWithTranslation<MainTexts>;
     aboutTexts: TextWithTranslation<AboutTexts>,
+    workTexts: TextWithTranslation<WorkTexts>,
 }
 
 export const multiLanguageTexts: MultiLanguageTexts = {
-    headerLinks: {
+    mainTexts: {
         en: {
-            work: 'Work',
-            about: 'About',
-            contacts: 'Contacts',
+            header: 'Slava. K',
+            headerLinks: {
+                work: 'Work',
+                about: 'About',
+                contacts: 'Contacts',
+            },
+            welcome: 'Welcome to my resume',
         },
         ru: {
-            work: 'Работа',
-            about: 'Обо мне',
-            contacts: 'Контакты',
-        },
+            header: 'Вячеслав. К',
+            headerLinks: {
+                work: 'Работа',
+                about: 'Обо мне',
+                contacts: 'Контакты',
+            },
+            welcome: 'Привет в моём резюме'
+        }
     },
     aboutTexts: {
         en: {
@@ -35,6 +62,18 @@ export const multiLanguageTexts: MultiLanguageTexts = {
             sectionName: 'Обо мне',
             header: 'Привет, я Вячеслав Колесников',
             text: 'Просто хороший человек',
+        },
+    },
+    workTexts: {
+        en: {
+            header: 'Work',
+            testing: {header: 'Testing', mainData: "Hi, i'm tester", skills: 'Jira, BDD, Manual testing'},
+            development: {header: 'Development', mainData: "Hi, i'm developer", skills: 'JS, CSS, React, React-native, Jira'},
+        },
+        ru: {
+            header: 'Работа',
+            testing: {header: 'Тестирование', mainData: 'Привет, я тестировщик', skills: 'Jira, BDD, Manual testing'},
+            development: {header: 'Разработка', mainData: "Привет, я разработчик", skills: 'JS, CSS, React, React-native, Jira'},
         },
     },
 };

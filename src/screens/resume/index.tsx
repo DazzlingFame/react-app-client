@@ -3,7 +3,7 @@ import './resumeScreenStyles.css'
 import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
 import {getLocalisedTexts, LocaleEnum} from "../../utils/localisation";
-import {HeaderLinksText, multiLanguageTexts} from "./constants";
+import {HeaderLinksText, MainTexts, multiLanguageTexts} from "./constants";
 
 type Props = {
 
@@ -52,7 +52,9 @@ export class Resume extends React.PureComponent<Props, State> {
     ]);
 
     render() {
-        const headerLinks = this.getHeaderLinksConfig(getLocalisedTexts(multiLanguageTexts.headerLinks, this.state.locale)).map(item => (
+        const mainTexts: MainTexts = getLocalisedTexts(multiLanguageTexts.mainTexts, this.state.locale);
+
+        const headerLinks = this.getHeaderLinksConfig(mainTexts.headerLinks).map(item => (
             <div className={'header_link_container'} onClick={item.onClick}>
                 <p className={'regular_text'}>
                     {item.text}
@@ -65,17 +67,17 @@ export class Resume extends React.PureComponent<Props, State> {
                 <div className={'container'}>
                     <div className={'nav_header_container'}>
                         <p className={'nav_header_text'}>
-                            Slava K.
+                            {mainTexts.header}
                         </p>
                         <div style={{display: 'flex', flexDirection: 'row'}}>
                             {headerLinks}
                         </div>
                     </div>
                     <p className={'bold_header_text'}>
-                        Welcome to my resume
+                        {mainTexts.welcome}
                     </p>
                     <div ref={this.workRef}>
-                        <WorkContent />
+                        <WorkContent texts={getLocalisedTexts(multiLanguageTexts.workTexts, this.state.locale)}/>
                     </div>
                     <div ref={this.aboutRef}>
                         <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, this.state.locale)}/>
