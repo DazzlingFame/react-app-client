@@ -15,7 +15,7 @@ type Props = {
 
 export const WorkContent: React.FC<Props> = props => {
     const [content, setContent] = useState('Tablio');
-    let contentComponent = null;
+    let contentTexts = props.texts.testing;
 
     const navigationConfig: Array<{text: string; type: ContentType}> = [
         {text: props.texts.testing.header, type: ContentType.TABLIO},
@@ -32,11 +32,11 @@ export const WorkContent: React.FC<Props> = props => {
 
     switch (content) {
         case ContentType.PHOTO_EDITING: {
-            contentComponent = <WorkBlock texts={props.texts.development} />;
+            contentTexts = props.texts.development;
             break;
         }
         case ContentType.TABLIO: {
-            contentComponent = <WorkBlock texts={props.texts.testing} />;
+            contentTexts = props.texts.testing;
             break;
         }
     }
@@ -53,7 +53,7 @@ export const WorkContent: React.FC<Props> = props => {
                  <Divider />
              </div>
              <div className={'content_container'}>
-                 {contentComponent}
+                 <WorkBlock texts={contentTexts} />
              </div>
          </div>
     )

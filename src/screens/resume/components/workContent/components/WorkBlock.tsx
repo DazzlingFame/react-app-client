@@ -2,16 +2,16 @@ import React from "react";
 import logo from '../../../../../assets/images/doge.jpg';
 import dogePillow from '../../../../../assets/images/dogePillow.jpg';
 import './WorkBlock.css'
-import {DOGE_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG} from "./constants";
+import {DOGE_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG} from "../../../constants";
 import {ImageTextHeader} from "../../imageTextHeader";
-import {TestingTexts} from "../../../constants";
+import {WorkBlockTexts} from "../../../constants";
 
 const photosArray: Array<{source: string, desc: string}> = [
     DOGE_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG, DOGE_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG
 ];
 
 type Props = {
-    texts: TestingTexts;
+    texts: WorkBlockTexts;
     imageSource?: string;
 }
 

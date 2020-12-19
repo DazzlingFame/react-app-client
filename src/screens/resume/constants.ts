@@ -1,6 +1,20 @@
 import {AboutTexts} from "./components/aboutContent";
 import {TextWithTranslation} from "../../utils/localisation";
 
+import logo from '../../assets/images/doge.jpg'
+import smilingDoge from '../../assets/images/dogeSmiling.jpg'
+import dogePillow from '../../assets/images/dogePillow.jpg'
+
+export const DOGE_IMG = {
+    source: logo, desc: 'doge'
+};
+export const DOGE_SMILING_IMG = {
+    source: smilingDoge, desc: 'smilingDoge'
+};
+export const DOGE_PILLOW_IMG = {
+    source: dogePillow, desc: 'dogePillow'
+};
+
 export type HeaderLinksText = {
     work: string,
     about: string,
@@ -9,11 +23,11 @@ export type HeaderLinksText = {
 
 export type WorkTexts = {
     header: string;
-    testing: TestingTexts;
-    development: TestingTexts;
+    testing: WorkBlockTexts;
+    development: WorkBlockTexts;
 }
 
-export type TestingTexts = {
+export type WorkBlockTexts = {
     header: string,
     mainData: string;
     skills: string;
