@@ -1,13 +1,12 @@
 import React from "react";
-import logo from '../../../../../assets/images/doge.jpg';
 import dogePillow from '../../../../../assets/images/dogePillow.jpg';
 import './WorkBlock.css'
 import {DOGE_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG} from "../../../constants";
-import {ImageTextHeader} from "../../imageTextHeader";
 import {WorkBlockTexts} from "../../../constants";
+import {ImageTextHeader} from "../../../../../components/imageTextHeader";
 
 const photosArray: Array<{source: string, desc: string}> = [
-    DOGE_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG, DOGE_IMG, DOGE_SMILING_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG, DOGE_IMG
+    DOGE_IMG, DOGE_SMILING_IMG, DOGE_PILLOW_IMG
 ];
 
 type Props = {
@@ -22,9 +21,8 @@ const WorkBlock: React.FC<Props> = props => {
 
     return (
         <div className={'work_block_container'}>
-            <ImageTextHeader imageSource={dogePillow} text={props.texts.mainData}/>
+            <ImageTextHeader imageSource={dogePillow} text={props.texts.mainData} />
             <div className={'work_block_photos_container'}>
-                <img src={logo} alt={'bigDoge'} style={{width: '80%', marginRight: 20, marginTop: 20}}/>
                 {photos}
             </div>
         </div>

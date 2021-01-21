@@ -1,7 +1,7 @@
-import '../../resumeScreenStyles.css'
+import '../resumeScreenStyles.css'
 import * as React from "react";
-import {ImageTextHeader} from "../imageTextHeader";
-import dogeSmiling from "../../../../assets/images/dogeSmiling.jpg"
+import dogeSmiling from "../../../assets/images/dogeSmiling.jpg"
+import {ImageTextHeader} from "../../../components/imageTextHeader";
 
 export type AboutTexts = {
     sectionName: string,
