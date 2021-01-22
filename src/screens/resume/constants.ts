@@ -4,6 +4,7 @@ import {TextWithTranslation} from "../../utils/localisation";
 import logo from '../../assets/images/doge.jpg'
 import smilingDoge from '../../assets/images/dogeSmiling.jpg'
 import dogePillow from '../../assets/images/dogePillow.jpg'
+import chevronDown from '../../assets/images/chevron-down-24.png'
 
 export const DOGE_IMG = {
     source: logo, desc: 'doge'
@@ -13,6 +14,10 @@ export const DOGE_SMILING_IMG = {
 };
 export const DOGE_PILLOW_IMG = {
     source: dogePillow, desc: 'dogePillow'
+};
+
+export const CHEVRON_DOWN = {
+    source: chevronDown, desc: 'chevronDown'
 };
 
 export type HeaderLinksText = {

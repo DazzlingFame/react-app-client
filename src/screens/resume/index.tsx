@@ -4,6 +4,8 @@ import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
 import {getLocalisedTexts, LocaleEnum} from "../../utils/localisation";
 import {HeaderLinksText, MainTexts, multiLanguageTexts} from "./constants";
+import LanguageSelector from "./components/languageSelector";
+import {LanguageCodes, SelectorItem} from "./components/languageSelector/LanguageSelector";
 
 type Props = {
 
@@ -39,17 +41,22 @@ export class Resume extends React.PureComponent<Props, State> {
         {text: contacts, onClick: () => {
                 this.contactsRef?.current && this.contactsRef.current.scrollIntoView({behavior: "smooth", block: "start"});
             }},
-        {text: 'RU', onClick: () => {
-                this.setState({
-                    locale: LocaleEnum.ru,
-                })
-            }},
-        {text: 'EN', onClick: () => {
+    ]);
+
+    onLanguageChanged = (pickedState: SelectorItem) => {
+        switch (pickedState.code) {
+            case LanguageCodes.ENG:
                 this.setState({
                     locale: LocaleEnum.en,
-                })
-            }}
-    ]);
+                });
+            break;
+            case LanguageCodes.RUS:
+                this.setState({
+                    locale: LocaleEnum.ru,
+                });
+                break;
+        }
+    };
 
     render() {
         const mainTexts: MainTexts = getLocalisedTexts(multiLanguageTexts.mainTexts, this.state.locale);
@@ -69,8 +76,9 @@ export class Resume extends React.PureComponent<Props, State> {
                         <p className={'nav_header_text'}>
                             {mainTexts.header}
                         </p>
-                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div className="nav_header_links_container">
                             {headerLinks}
+                            <LanguageSelector onStateChanged={this.onLanguageChanged}/>
                         </div>
                     </div>
                     <p className={'bold_header_text'}>
