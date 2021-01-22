@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-app-client/static/css/main.cd0af678.chunk.css",
-    "main.js": "/react-app-client/static/js/main.83b6ffd5.chunk.js",
-    "main.js.map": "/react-app-client/static/js/main.83b6ffd5.chunk.js.map",
+    "main.css": "/react-app-client/static/css/main.f4a45db9.chunk.css",
+    "main.js": "/react-app-client/static/js/main.bfc3979d.chunk.js",
+    "main.js.map": "/react-app-client/static/js/main.bfc3979d.chunk.js.map",
     "runtime-main.js": "/react-app-client/static/js/runtime-main.be6c285e.js",
     "runtime-main.js.map": "/react-app-client/static/js/runtime-main.be6c285e.js.map",
-    "static/js/2.2663ab6f.chunk.js": "/react-app-client/static/js/2.2663ab6f.chunk.js",
-    "static/js/2.2663ab6f.chunk.js.map": "/react-app-client/static/js/2.2663ab6f.chunk.js.map",
+    "static/js/2.fb808d43.chunk.js": "/react-app-client/static/js/2.fb808d43.chunk.js",
+    "static/js/2.fb808d43.chunk.js.map": "/react-app-client/static/js/2.fb808d43.chunk.js.map",
     "index.html": "/react-app-client/index.html",
-    "precache-manifest.8d4894fde4bcc043d3e9eedb7f60021c.js": "/react-app-client/precache-manifest.8d4894fde4bcc043d3e9eedb7f60021c.js",
+    "precache-manifest.f24d6fbc176357ba9358b40e82d6bec9.js": "/react-app-client/precache-manifest.f24d6fbc176357ba9358b40e82d6bec9.js",
     "service-worker.js": "/react-app-client/service-worker.js",
-    "static/css/main.cd0af678.chunk.css.map": "/react-app-client/static/css/main.cd0af678.chunk.css.map",
-    "static/js/2.2663ab6f.chunk.js.LICENSE.txt": "/react-app-client/static/js/2.2663ab6f.chunk.js.LICENSE.txt",
+    "static/css/main.f4a45db9.chunk.css.map": "/react-app-client/static/css/main.f4a45db9.chunk.css.map",
+    "static/js/2.fb808d43.chunk.js.LICENSE.txt": "/react-app-client/static/js/2.fb808d43.chunk.js.LICENSE.txt",
     "static/media/font.css": "/react-app-client/static/media/Rubik-Regular.b3d0902b.ttf",
     "static/media/doge.jpg": "/react-app-client/static/media/doge.967012b8.jpg",
     "static/media/dogePillow.jpg": "/react-app-client/static/media/dogePillow.9de42fb7.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.be6c285e.js",
-    "static/js/2.2663ab6f.chunk.js",
-    "static/css/main.cd0af678.chunk.css",
-    "static/js/main.83b6ffd5.chunk.js"
+    "static/js/2.fb808d43.chunk.js",
+    "static/css/main.f4a45db9.chunk.css",
+    "static/js/main.bfc3979d.chunk.js"
   ]
 }
