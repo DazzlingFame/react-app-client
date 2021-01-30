@@ -2,41 +2,42 @@ import React, {useState} from "react";
 import {CHEVRON_DOWN} from "../../constants";
 import './LanguageSelector.css'
 import '../../resumeScreenStyles.css'
+import {LocaleEnum} from "../../../../utils/localisation";
 
 export type SelectorItem = {
-    code: LanguageCodes;
+    code: LocaleEnum;
     text: string;
 }
 
-export enum LanguageCodes {
-    ENG,
-    RUS,
-}
-
 type Props = {
-    initialState?: SelectorItem;
+    initialState?: LocaleEnum;
     onStateChanged: (pickedState: SelectorItem) => void;
 }
 
-const languageStates: SelectorItem[] = [
+export const languageStates: SelectorItem[] = [
     {
-        code: LanguageCodes.ENG,
+        code: LocaleEnum.en,
         text: 'English'
     },
     {
-        code: LanguageCodes.RUS,
+        code: LocaleEnum.ru,
         text: 'Русский'
     }
 ];
 
 const LanguageSelector: React.FC<Props> = (props: Props) => {
-    const [currentState, setCurrentState] = useState<SelectorItem>(props.initialState ?? languageStates[0]);
+    const [currentState, setCurrentState] = useState<SelectorItem>(
+        props.initialState
+            ? languageStates.find(item => item.code === props.initialState) ?? languageStates[0]
+            : languageStates[0]
+    );
     const [isSelectorVisible, setIsSelectorVisible] = useState<boolean>(false);
     const toggleItems = languageStates.map(toggleState => (
         <div className="dropdown-selector__selected-container"
              onClick={() => {
                 setCurrentState(toggleState);
                 props.onStateChanged(toggleState);
+                setIsSelectorVisible(false);
             }
         }>
             <text className="small_text dropdown-selector__selected-text">

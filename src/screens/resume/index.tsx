@@ -2,10 +2,10 @@ import React from "react";
 import './resumeScreenStyles.css'
 import {WorkContent} from "./components/workContent";
 import {AboutContent} from "./components/aboutContent";
-import {getLocalisedTexts, LocaleEnum} from "../../utils/localisation";
+import {getLocaleFromStorage, getLocalisedTexts, LocaleEnum, setLocaleToStorage} from "../../utils/localisation";
 import {HeaderLinksText, MainTexts, multiLanguageTexts} from "./constants";
 import LanguageSelector from "./components/languageSelector";
-import {LanguageCodes, SelectorItem} from "./components/languageSelector/LanguageSelector";
+import {SelectorItem} from "./components/languageSelector/LanguageSelector";
 
 type Props = {
 
@@ -27,7 +27,7 @@ export class Resume extends React.PureComponent<Props, State> {
         this.contactsRef = React.createRef<HTMLDivElement>();
 
         this.state = {
-            locale: LocaleEnum.en,
+            locale:  getLocaleFromStorage(),
         }
     }
 
@@ -45,15 +45,17 @@ export class Resume extends React.PureComponent<Props, State> {
 
     onLanguageChanged = (pickedState: SelectorItem) => {
         switch (pickedState.code) {
-            case LanguageCodes.ENG:
+            case LocaleEnum.en:
                 this.setState({
                     locale: LocaleEnum.en,
                 });
-            break;
-            case LanguageCodes.RUS:
+                setLocaleToStorage(LocaleEnum.en);
+                break;
+            case LocaleEnum.ru:
                 this.setState({
                     locale: LocaleEnum.ru,
                 });
+                setLocaleToStorage(LocaleEnum.ru);
                 break;
         }
     };
@@ -78,7 +80,7 @@ export class Resume extends React.PureComponent<Props, State> {
                         </p>
                         <div className="nav_header_links_container">
                             {headerLinks}
-                            <LanguageSelector onStateChanged={this.onLanguageChanged}/>
+                            <LanguageSelector initialState={this.state.locale} onStateChanged={this.onLanguageChanged}/>
                         </div>
                     </div>
                     <p className={'bold_header_text'}>
