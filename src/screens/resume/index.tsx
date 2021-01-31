@@ -5,7 +5,7 @@ import {AboutContent} from "./components/aboutContent";
 import {getLocaleFromStorage, getLocalisedTexts, LocaleEnum, setLocaleToStorage} from "../../utils/localisation";
 import {HeaderLinksText, MainTexts, multiLanguageTexts} from "./constants";
 import LanguageSelector from "./components/languageSelector";
-import {SelectorItem} from "./components/languageSelector/LanguageSelector";
+import {SelectorItem} from "../../components/selector/Selector";
 
 type Props = {
 

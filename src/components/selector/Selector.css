@@ -49,3 +49,15 @@
     border-radius: 8px;
     background-color: var(--secondaryColor);
 }
+
+.regular_text {
+    font-family: Rubic, monospace;
+    font-size: var(--regular);
+    user-select: none;
+}
+
+.small_text {
+    font-family: Rubic, monospace;
+    font-size: var(--small);
+    user-select: none;
+}
