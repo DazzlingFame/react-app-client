@@ -1,10 +1,13 @@
-import {AboutTexts} from "./components/aboutContent";
+import {AboutTexts} from "./components/AboutContent";
 import {TextWithTranslation} from "../../utils/localisation";
 
 import logo from '../../assets/images/doge.jpg'
 import smilingDoge from '../../assets/images/dogeSmiling.jpg'
 import dogePillow from '../../assets/images/dogePillow.jpg'
-import chevronDown from '../../assets/images/chevron-down-24.png'
+import aboutMePhoto from '../../assets/images/about-me-photo.jpg'
+import shivaPhoto from '../../assets/images/shiva-min.jpg'
+import warhammerPhoto from '../../assets/images/warhammer-min.jpg'
+import bicyclePhoto from '../../assets/images/bicycle-min.jpg'
 
 export const DOGE_IMG = {
     source: logo, desc: 'doge'
@@ -15,9 +18,18 @@ export const DOGE_SMILING_IMG = {
 export const DOGE_PILLOW_IMG = {
     source: dogePillow, desc: 'dogePillow'
 };
+export const ABOUT_ME_IMG = {
+    source: aboutMePhoto, desc: 'aboutMePhoto'
+};
+export const SHIVA_IMG = {
+    source: shivaPhoto, desc: 'shiva'
+};
 
-export const CHEVRON_DOWN = {
-    source: chevronDown, desc: 'chevronDown'
+export const WARHAMMER_IMG = {
+    source: warhammerPhoto, desc: 'warhammer'
+};
+export const BICYCLE_IMG = {
+    source: bicyclePhoto, desc: 'bicycle'
 };
 
 export type HeaderLinksText = {
@@ -75,8 +87,12 @@ export const multiLanguageTexts: MultiLanguageTexts = {
         en: {
             sectionName: 'About',
             header: 'Hi, I’m Viacheslav Kolesnikov.',
-            text: 'Just a good guy',
-        },
+            text: 'Currently I am a FrontEnd developer in the PROFI.RU customer service team. In my career, I went from a junior tester to Senior QA, and then,' +
+                ' changing the track, became a React-Native and React developer. \ n' +
+                'I graduated from the "Research University of Moscow Institute of Electronic Technology"' +
+                ' with a degree in Software Engineering. It was very interesting to study, we had courses on DBMS, software testing, algorithms, OOP and design patterns that' +
+                ' really came in handy in my work. I love sports, cycling in the summer and snowboarding in the winter, it helps to keep fit and unload my head during hard work' +
+                ' days. I also enjoy board games, participating in tournaments and decorating miniatures in the Warhammer 40k universe. "',        },
         ru: {
             sectionName: 'Обо мне',
             header: 'Привет, я Вячеслав Колесников.',

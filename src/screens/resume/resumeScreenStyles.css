@@ -101,3 +101,18 @@
     font-size: var(--small);
     user-select: none;
 }
+
+.flat_photo__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.flat_photo__item {
+    width: 30%;
+    margin-right: 20px;
+    margin-top: 20px;
+    object-fit: contain;
+}

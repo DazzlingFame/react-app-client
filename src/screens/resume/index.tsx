@@ -1,11 +1,11 @@
 import React from "react";
 import './resumeScreenStyles.css'
-import {WorkContent} from "./components/workContent";
-import {AboutContent} from "./components/aboutContent";
 import {getLocaleFromStorage, getLocalisedTexts, LocaleEnum, setLocaleToStorage} from "../../utils/localisation";
 import {HeaderLinksText, MainTexts, multiLanguageTexts} from "./constants";
-import LanguageSelector from "./components/languageSelector";
 import {SelectorItem} from "../../components/selector/Selector";
+import {WorkContent} from "./components/workContent";
+import LanguageSelector from "./components/LanguageSelector";
+import AboutContent from "./components/AboutContent";
 
 type Props = {
 

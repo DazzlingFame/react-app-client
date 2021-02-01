@@ -1,8 +1,7 @@
 import React from "react";
-import '../../resumeScreenStyles.css'
-import {LocaleEnum} from "../../../../utils/localisation";
-import Selector from "../../../../components/selector";
-import {SelectorItem} from "../../../../components/selector/Selector";
+import {LocaleEnum} from "../../../utils/localisation";
+import Selector from "../../../components/selector";
+import {SelectorItem} from "../../../components/selector/Selector";
 
 type Props = {
     initialState?: LocaleEnum;
