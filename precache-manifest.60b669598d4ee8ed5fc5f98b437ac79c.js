@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "896ad33d17b54d109f3a48e3fca05f58",
+    "revision": "2bed5b131e74251cf85686d87b0c1817",
     "url": "/react-app-client/index.html"
   },
   {
-    "revision": "742ce4e50fe34aee271a",
-    "url": "/react-app-client/static/css/main.f4a45db9.chunk.css"
+    "revision": "97b3714a8c182fe84d39",
+    "url": "/react-app-client/static/css/main.1d1678ef.chunk.css"
   },
   {
-    "revision": "0b22f4a271785f15ace7",
-    "url": "/react-app-client/static/js/2.fb808d43.chunk.js"
+    "revision": "1bfe62d8411584f1140d",
+    "url": "/react-app-client/static/js/2.3500dc7a.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/react-app-client/static/js/2.fb808d43.chunk.js.LICENSE.txt"
+    "url": "/react-app-client/static/js/2.3500dc7a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "742ce4e50fe34aee271a",
-    "url": "/react-app-client/static/js/main.bfc3979d.chunk.js"
+    "revision": "97b3714a8c182fe84d39",
+    "url": "/react-app-client/static/js/main.0057e728.chunk.js"
   },
   {
     "revision": "73867ff6bf036032c31e",
@@ -36,6 +36,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app-client/static/media/Rubik-Regular.b3d0902b.ttf"
   },
   {
+    "revision": "19e4a3ce7a74d94ca33299fef6f3b8b4",
+    "url": "/react-app-client/static/media/about-me-photo.19e4a3ce.jpg"
+  },
+  {
+    "revision": "17faafcf708b692d32f43915dca5949d",
+    "url": "/react-app-client/static/media/bicycle-min.17faafcf.jpg"
+  },
+  {
     "revision": "967012b85371221f95dd6a0d81769d5d",
     "url": "/react-app-client/static/media/doge.967012b8.jpg"
   },
@@ -50,5 +58,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "/react-app-client/static/media/logo.5d5d9eef.svg"
+  },
+  {
+    "revision": "fb680bba9876d99c852a88fd02fd136d",
+    "url": "/react-app-client/static/media/shiva-min.fb680bba.jpg"
+  },
+  {
+    "revision": "87baca84c77ca90d224d5e30f853412f",
+    "url": "/react-app-client/static/media/warhammer-min.87baca84.jpg"
   }
 ]);
