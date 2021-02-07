@@ -25,6 +25,7 @@
     border-radius: 100px;
     padding-bottom: 12px;
     align-self: center;
+    user-select: none;
 }
 
 .contact_name {
@@ -42,6 +43,7 @@
     width: 24px;
     height: 24px;
     padding-right: 12px;
+    user-select: none;
 }
 
 .contact_card__contact_item__text {
