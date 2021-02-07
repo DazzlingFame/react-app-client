@@ -8,28 +8,44 @@ import aboutMePhoto from '../../assets/images/about-me-photo.jpg'
 import shivaPhoto from '../../assets/images/shiva-min.jpg'
 import warhammerPhoto from '../../assets/images/warhammer-min.jpg'
 import bicyclePhoto from '../../assets/images/bicycle-min.jpg'
+import vkLogo from '../../assets/images/vk-64x64.png'
+import phoneLogo from '../../assets/images/phone-64x64.png'
+import telegramLogo from '../../assets/images/telegram-64x64.png'
 
-export const DOGE_IMG = {
+type ImageSource = {
+    source: string;
+    desc: string;
+}
+
+export const DOGE_IMG: ImageSource = {
     source: logo, desc: 'doge'
 };
-export const DOGE_SMILING_IMG = {
+export const DOGE_SMILING_IMG: ImageSource = {
     source: smilingDoge, desc: 'smilingDoge'
 };
-export const DOGE_PILLOW_IMG = {
+export const DOGE_PILLOW_IMG: ImageSource = {
     source: dogePillow, desc: 'dogePillow'
 };
-export const ABOUT_ME_IMG = {
+export const ABOUT_ME_IMG: ImageSource = {
     source: aboutMePhoto, desc: 'aboutMePhoto'
 };
-export const SHIVA_IMG = {
+export const SHIVA_IMG: ImageSource = {
     source: shivaPhoto, desc: 'shiva'
 };
-
-export const WARHAMMER_IMG = {
+export const WARHAMMER_IMG: ImageSource = {
     source: warhammerPhoto, desc: 'warhammer'
 };
-export const BICYCLE_IMG = {
+export const BICYCLE_IMG: ImageSource = {
     source: bicyclePhoto, desc: 'bicycle'
+};
+export const VK_LOGO: ImageSource = {
+    source: vkLogo, desc: 'vk_logo'
+};
+export const TELEGRAM_LOGO: ImageSource = {
+    source: telegramLogo, desc: 'telegram_logo'
+};
+export const PHONE_LOGO: ImageSource = {
+    source: phoneLogo, desc: 'phone_logo'
 };
 
 export type HeaderLinksText = {

@@ -6,6 +6,7 @@ import {SelectorItem} from "../../components/selector/Selector";
 import {WorkContent} from "./components/workContent";
 import LanguageSelector from "./components/LanguageSelector";
 import AboutContent from "./components/AboutContent";
+import ContactCard from "./components/ContactCard";
 
 type Props = {
 
@@ -93,9 +94,7 @@ export class Resume extends React.PureComponent<Props, State> {
                         <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, this.state.locale)}/>
                     </div>
                     <div ref={this.contactsRef}>
-                        <p>
-                            Contacts
-                        </p>
+                        <ContactCard/>
                     </div>
                 </div>
             </div>
