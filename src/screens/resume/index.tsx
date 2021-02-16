@@ -65,7 +65,7 @@ export class Resume extends React.PureComponent<Props, State> {
         const mainTexts: MainTexts = getLocalisedTexts(multiLanguageTexts.mainTexts, this.state.locale);
 
         const headerLinks = this.getHeaderLinksConfig(mainTexts.headerLinks).map(item => (
-            <div className={'header_link_container'} onClick={item.onClick}>
+            <div className={'header_link_container'} onClick={item.onClick} key={item.text}>
                 <p className={'regular_text'}>
                     {item.text}
                 </p>

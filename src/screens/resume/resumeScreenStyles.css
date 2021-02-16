@@ -3,6 +3,8 @@
     position: relative;
     color: white;
     width: 100%;
+    min-width: 720px;
+    background-color: var(--primaryDark);
 }
 
 .root_container::after {

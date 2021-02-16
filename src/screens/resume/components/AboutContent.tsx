@@ -17,7 +17,7 @@ const photosArray = [BICYCLE_IMG, WARHAMMER_IMG, SHIVA_IMG];
 
 const AboutContent: React.FC<Props> = props => {
     const photos = photosArray.map(photo => (
-        <img src={photo.source} alt={photo.desc} className="flat_photo__item"/>
+        <img key={photo.desc} src={photo.source} alt={photo.desc} className="flat_photo__item"/>
     ));
     return (
         <div>
