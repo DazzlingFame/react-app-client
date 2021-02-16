@@ -3,26 +3,13 @@
     position: relative;
     color: white;
     width: 100%;
-    min-width: 720px;
+    min-width: 1080px;
     background-color: var(--primaryDark);
-}
-
-.root_container::after {
-    content: '';
-    background-color: var(--primaryDark);
-    background-blend-mode: overlay;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
 }
 
 .container {
     display: flex;
-    padding: 20px 5%;
+    padding: 20px 2%;
     flex-direction: column;
     overflow-y: scroll;
 }

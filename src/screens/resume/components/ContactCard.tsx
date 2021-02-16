@@ -50,7 +50,7 @@ const ContactCard: React.FC<Props> = () => {
     ));
 
     return (
-        <div className='container'>
+        <div className='contact_card__root_container'>
             <p className={'bold_subheader_text'}>
                 Contacts
             </p>
