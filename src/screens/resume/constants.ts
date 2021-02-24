@@ -2,6 +2,8 @@ import {AboutTexts} from "./components/AboutContent";
 import {TextWithTranslation} from "../../utils/localisation";
 
 import logo from '../../assets/images/doge.jpg'
+import allure from '../../assets/images/allure.jpg'
+import checklist from '../../assets/images/checklist.png'
 import smilingDoge from '../../assets/images/dogeSmiling.jpg'
 import dogePillow from '../../assets/images/dogePillow.jpg'
 import aboutMePhoto from '../../assets/images/about-me-photo.jpg'
@@ -22,6 +24,12 @@ export const DOGE_IMG: ImageSource = {
 };
 export const DOGE_SMILING_IMG: ImageSource = {
     source: smilingDoge, desc: 'smilingDoge'
+};
+export const ALLURE_IMG: ImageSource = {
+    source: allure, desc: 'allure'
+};
+export const CHECKLIST_IMG: ImageSource = {
+    source: checklist, desc: 'checklist'
 };
 export const DOGE_PILLOW_IMG: ImageSource = {
     source: dogePillow, desc: 'dogePillow'
@@ -123,30 +131,44 @@ export const multiLanguageTexts: MultiLanguageTexts = {
     workTexts: {
         en: {
             header: 'Work',
-            testing: {header: 'Testing', mainData: "Hi! In 2017 I graduated from the university and got a job at PROFI.RU as a junior " +
+            testing: {
+                header: 'Testing',
+                mainData: "In 2017 I graduated from the university and got a job at PROFI.RU as a junior " +
                     "testing specialist, in the future, leaving this position as a Senior QA. I joined the mobile development team and immediately got into work. The mentor quickly taught " +
                     "me how to use Jira as a task and bug tracker, I began to closely engage in functional testing, regression testing, writing test cases and checklists. \n" +
                     "The company had a positive attitude towards employee initiatives, and due to the specialty of the sprints, I started to have free time, and my team lead and I decided to " +
                     "try to automate some of the regressions. From university, I had Java programming skills and the first version of automation was implemented on the BDD framework JBehave, " +
                     "and then, after reflecting on the results, we decided to switch to JS and WebdriverIO. As a result, we have reduced the time for regression testing of both platforms of " +
-                    "the mobile application in a team from 1-2 days to 4-6 hours.", skills: 'Jira, BDD, Manual testing, Regression testing, Mobile testing, WDIO, WebdriverIO'},
+                    "the mobile application in a team from 1-2 days to 4-6 hours.",
+                skills: 'Skills: Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
+            },
             development: {
                 header: 'Development',
                 mainData: "Hi, i'm developer",
-                skills: 'JS, CSS, React, React-native, Jira'},
+                skills: 'Skills: JS, CSS, React, React-native, Jira'
+            },
         },
         ru: {
             header: 'Работа',
             testing: {
                 header: 'Тестирование',
-                mainData: 'Привет, в 2017 году я закончил университет и устроился в PROFI.RU в качестве младшего специалиста по тестированию, ' +
+                mainData: 'В 2017 году я закончил университет и устроился в PROFI.RU в качестве младшего специалиста по тестированию, ' +
                     'в будущем, покинув эту должность в качестве Senior QA. Я попал в команду мобильной разработки и сразу включился в работу. Ментор быстро научила меня пользоваться Jira в качестве таск и ' +
                     'баг трекера, я начал плотно заниматься функциональным тестированием задач, регрессионным тестированием, составлением тест кейсов и чеклистов. \n' +
                     'Компания положительно относилась к инициативам работников, а из-за особенностей спринтов у меня начало появляться свободное время, и мы с моим тимлидом приняли решение предпринять попытку ' +
                     'автоматизации части регрессов. С университета у меня были навыки программирования на Java и первая версия автоматизации была реализована на BDD фреймворке JBehave, а затем, порефлексировав ' +
                     'над результатами мы решили перейти на JS и WebdriverIO. В итоге мы сократили время регрессионного тестирования обеих платформ мобильного приложения в команде с 1-2 дней до 4-6 часов.',
-                skills: 'Jira, BDD, Manual testing, Regression testing, Mobile testing, WDIO, WebdriverIO'},
-            development: {header: 'Разработка', mainData: "Привет, я разработчик", skills: 'JS, CSS, React, React-native, Jira'},
+                skills: 'Навыки: Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
+            },
+            development: {
+                header: 'Разработка',
+                mainData: "Я занимаюсь разработкой мобильных и Web приложений с 2019 года. Изначально я начал как React-Native разработчик. Мы с командой трудились над новым приложением для " +
+                    "специалистов, которое пришло на замену старых приложений на Kotlin и Swift. Я решил много задач по переносу функционала на новую платформу и его усовершенствованию: " +
+                    "создание клиентской части фильтров для поиска нужных заказов, системы Cross-Sell, in-app уведомлений и многие другие. Со временем компания начала обновлять сайт для " +
+                    "специалистов с последующим переходом на React, в чем я так же принимаю активное участие. \n" +
+                    "Сейчас я developer в PROFI.RU, который не боится новых вызовов и всегда готов учиться.",
+                skills: 'Навыки: TypeScript, JavaScript, CSS, React, React-Native, Flow, Jira'
+            },
         },
     },
 };

@@ -11,9 +11,10 @@ type Contact = {
 }
 const contactsArray: Contact[] = [
     {
-        type: 'text',
+        type: 'link',
         img: TELEGRAM_LOGO.source,
-        text: '@DazzlingFame'
+        text: 'DazzlingFame',
+        link: 'https://t.me/DazzlingFame',
     },
     {
         type: 'text',
