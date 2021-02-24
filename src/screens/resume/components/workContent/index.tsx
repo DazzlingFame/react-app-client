@@ -4,9 +4,11 @@ import '../../resumeScreenStyles.css'
 import WorkBlock from "./components";
 import {ALLURE_IMG, DOGE_PILLOW_IMG, WorkTexts} from "../../constants";
 
+const WORK_CONTENT_TYPE_KEY = 'WORK_CONTENT_TYPE_KEY';
+
 enum ContentType {
-    TABLIO = 'Tablio',
-    PHOTO_EDITING = 'PhotoEditing'
+    TESTER = 'Tablio',
+    DEVELOPER = 'PhotoEditing'
 }
 
 type Props = {
@@ -14,17 +16,22 @@ type Props = {
 }
 
 export const WorkContent: React.FC<Props> = props => {
-    const [content, setContent] = useState('Tablio');
+    const [content, setContent] = useState(localStorage.getItem(WORK_CONTENT_TYPE_KEY) || ContentType.TESTER);
     let contentTexts = props.texts.testing;
     let photosArray: Array<{source: string, desc: string}> = [];
 
     const navigationConfig: Array<{text: string; type: ContentType}> = [
-        {text: props.texts.testing.header, type: ContentType.TABLIO},
-        {text: props.texts.development.header, type: ContentType.PHOTO_EDITING},
+        {text: props.texts.testing.header, type: ContentType.TESTER},
+        {text: props.texts.development.header, type: ContentType.DEVELOPER},
     ];
 
+    const onContentTabChanged = (type: ContentType) => {
+        setContent(type);
+        localStorage.setItem(WORK_CONTENT_TYPE_KEY, type);
+    };
+
     const navigationLinks = navigationConfig.map(item => (
-        <div className={content === item.type ?  'navigation_link_container navigation_link_container_selected' : 'navigation_link_container'} onClick={() => setContent(item.type)}>
+        <div className={content === item.type ?  'navigation_link_container navigation_link_container_selected' : 'navigation_link_container'} onClick={() => onContentTabChanged(item.type)}>
             <p className={'small_text'}>
                 {item.text}
             </p>
@@ -32,14 +39,14 @@ export const WorkContent: React.FC<Props> = props => {
     ));
 
     switch (content) {
-        case ContentType.PHOTO_EDITING: {
+        case ContentType.DEVELOPER: {
             contentTexts = props.texts.development;
             photosArray = [
                 DOGE_PILLOW_IMG
             ];
             break;
         }
-        case ContentType.TABLIO: {
+        case ContentType.TESTER: {
             contentTexts = props.texts.testing;
             photosArray = [ALLURE_IMG];
             break;
