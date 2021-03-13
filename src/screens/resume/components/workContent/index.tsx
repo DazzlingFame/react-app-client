@@ -2,7 +2,7 @@ import {Divider} from "../../../../components/divider";
 import React, {useState} from "react";
 import '../../resumeScreenStyles.css'
 import WorkBlock from "./components";
-import {ALLURE_IMG, DOGE_PILLOW_IMG, WorkTexts} from "../../constants";
+import {ALLURE_IMG, E2E_STEP_IMG, ORDERS_MAP_IMG, DLIMS_IMG, WorkTexts} from "../../constants";
 
 const WORK_CONTENT_TYPE_KEY = 'WORK_CONTENT_TYPE_KEY';
 
@@ -42,13 +42,13 @@ export const WorkContent: React.FC<Props> = props => {
         case ContentType.DEVELOPER: {
             contentTexts = props.texts.development;
             photosArray = [
-                DOGE_PILLOW_IMG
+                ORDERS_MAP_IMG, DLIMS_IMG
             ];
             break;
         }
         case ContentType.TESTER: {
             contentTexts = props.texts.testing;
-            photosArray = [ALLURE_IMG];
+            photosArray = [ALLURE_IMG, E2E_STEP_IMG];
             break;
         }
     }

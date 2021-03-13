@@ -1,5 +1,5 @@
 import React from "react";
-import {DOGE_SMILING_IMG, PHONE_LOGO, TELEGRAM_LOGO, VK_LOGO} from "../constants";
+import {ContactsTexts, DOGE_SMILING_IMG, PHONE_LOGO, TELEGRAM_LOGO, VK_LOGO} from "../constants";
 import './ContactCard.css';
 import '../resumeScreenStyles.css';
 
@@ -30,10 +30,10 @@ const contactsArray: Contact[] = [
 ];
 
 type Props = {
-
+    texts: ContactsTexts;
 }
 
-const ContactCard: React.FC<Props> = () => {
+const ContactCard: React.FC<Props> = ({texts}) => {
     const contactItems = contactsArray.map(item => (
         <div key={item.text} className="contact_card__contact_item__container">
             {item.type === 'text' ?
@@ -53,12 +53,12 @@ const ContactCard: React.FC<Props> = () => {
     return (
         <div className='contact_card__root_container'>
             <p className={'bold_subheader_text'}>
-                Contacts
+                {texts.header}
             </p>
         <div className="contact_card__container">
             <div className="contact_card__block_container">
                 <img src={DOGE_SMILING_IMG.source} alt="contact_photo" className="contact_photo"/>
-                <text className="regular_text contact_name">Kolesnikov Viacheslav</text>
+                <text className="regular_text contact_name">{texts.name}</text>
             </div>
             <div className="contact_card__block_container">
                 {contactItems}

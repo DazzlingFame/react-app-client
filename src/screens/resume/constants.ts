@@ -13,6 +13,9 @@ import bicyclePhoto from '../../assets/images/bicycle-min.jpg'
 import vkLogo from '../../assets/images/vk-64x64.png'
 import phoneLogo from '../../assets/images/phone-64x64.png'
 import telegramLogo from '../../assets/images/telegram-64x64.png'
+import ordersMapPhoto from '../../assets/images/map-photo.png'
+import dlims from '../../assets/images/dlims-photo.png'
+import e2eStep from '../../assets/images/e2e-step-def.png'
 
 type ImageSource = {
     source: string;
@@ -28,11 +31,20 @@ export const DOGE_SMILING_IMG: ImageSource = {
 export const ALLURE_IMG: ImageSource = {
     source: allure, desc: 'allure'
 };
+export const E2E_STEP_IMG: ImageSource = {
+    source: e2eStep, desc: 'e2eStep'
+};
 export const CHECKLIST_IMG: ImageSource = {
     source: checklist, desc: 'checklist'
 };
 export const DOGE_PILLOW_IMG: ImageSource = {
     source: dogePillow, desc: 'dogePillow'
+};
+export const ORDERS_MAP_IMG: ImageSource = {
+    source: ordersMapPhoto, desc: 'ordersMap'
+};
+export const DLIMS_IMG: ImageSource = {
+    source: dlims, desc: 'subscriptions'
 };
 export const ABOUT_ME_IMG: ImageSource = {
     source: aboutMePhoto, desc: 'aboutMePhoto'
@@ -80,10 +92,16 @@ export type MainTexts = {
     welcome: string;
 }
 
+export type ContactsTexts = {
+    header: string;
+    name: string;
+}
+
 type MultiLanguageTexts = {
     mainTexts: TextWithTranslation<MainTexts>;
     aboutTexts: TextWithTranslation<AboutTexts>,
     workTexts: TextWithTranslation<WorkTexts>,
+    contactsTexts: TextWithTranslation<ContactsTexts>,
 }
 
 export const multiLanguageTexts: MultiLanguageTexts = {
@@ -140,12 +158,16 @@ export const multiLanguageTexts: MultiLanguageTexts = {
                     "try to automate some of the regressions. From university, I had Java programming skills and the first version of automation was implemented on the BDD framework JBehave, " +
                     "and then, after reflecting on the results, we decided to switch to JS and WebdriverIO. As a result, we have reduced the time for regression testing of both platforms of " +
                     "the mobile application in a team from 1-2 days to 4-6 hours.",
-                skills: 'Skills: Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
+                skills: 'Skills: Agile, Scrum, Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
             },
             development: {
                 header: 'Development',
-                mainData: "Hi, i'm developer",
-                skills: 'Skills: JS, CSS, React, React-native, Jira'
+                mainData: "I have been developing mobile and web applications since 2019. I originally started as a React-Native developer. My team and I worked on a new application for executors, " +
+                    "which replaced old Kotlin and Swift applications. I have solved many tasks of transferring functionality to a new platform and improving it: creating the client side of " +
+                    "filters for finding the necessary orders, a Cross-Sell system, in-app notifications, and many others. Over time, the company began to update the site for executors with " +
+                    "the subsequent transition to React, in which I also take an active part. \ n "+
+                    "Now I am a developer at PROFI.RU, who is not afraid of new challenges and is always ready to learn.",
+                skills: 'Skills: TypeScript, JavaScript, CSS, React, React-Native, Flow, Jira, Agile, Scrum'
             },
         },
         ru: {
@@ -158,7 +180,7 @@ export const multiLanguageTexts: MultiLanguageTexts = {
                     'Компания положительно относилась к инициативам работников, а из-за особенностей спринтов у меня начало появляться свободное время, и мы с моим тимлидом приняли решение предпринять попытку ' +
                     'автоматизации части регрессов. С университета у меня были навыки программирования на Java и первая версия автоматизации была реализована на BDD фреймворке JBehave, а затем, порефлексировав ' +
                     'над результатами мы решили перейти на JS и WebdriverIO. В итоге мы сократили время регрессионного тестирования обеих платформ мобильного приложения в команде с 1-2 дней до 4-6 часов.',
-                skills: 'Навыки: Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
+                skills: 'Навыки: Agile, Scrum, Jira, BDD, Manual testing, Regression testing, Mobile testing, Automated testing, WDIO, WebdriverIO'
             },
             development: {
                 header: 'Разработка',
@@ -167,8 +189,18 @@ export const multiLanguageTexts: MultiLanguageTexts = {
                     "создание клиентской части фильтров для поиска нужных заказов, системы Cross-Sell, in-app уведомлений и многие другие. Со временем компания начала обновлять сайт для " +
                     "специалистов с последующим переходом на React, в чем я так же принимаю активное участие. \n" +
                     "Сейчас я developer в PROFI.RU, который не боится новых вызовов и всегда готов учиться.",
-                skills: 'Навыки: TypeScript, JavaScript, CSS, React, React-Native, Flow, Jira'
+                skills: 'Навыки: TypeScript, JavaScript, CSS, React, React-Native, Flow, Jira, Agile, Scrum'
             },
         },
     },
+    contactsTexts: {
+        en: {
+            header: 'Contacts',
+            name: 'Viacheslav Kolesnikov',
+        },
+        ru: {
+            header: 'Контакты',
+            name: 'Вячеслав Колесников',
+        }
+    }
 };

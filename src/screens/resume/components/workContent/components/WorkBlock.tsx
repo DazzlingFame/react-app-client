@@ -4,6 +4,7 @@ import '../../../resumeScreenStyles.css';
 import './WorkBlock.css'
 import {WorkBlockTexts} from "../../../constants";
 import {ImageTextHeader} from "../../../../../components/imageTextHeader";
+import {getWidth} from "../../../../../utils/global";
 
 
 
@@ -14,8 +15,10 @@ type Props = {
 }
 
 const WorkBlock: React.FC<Props> = props => {
+    const imageSize = getWidth() * 0.3;
+
     const photos = props.photos.map(photo => (
-        <img src={photo.source} alt={photo.desc} style={{width: '30%', marginRight: 20, marginTop: 20, objectFit: 'contain', userSelect: 'none'}}/>
+        <img src={photo.source} alt={photo.desc} style={{width: imageSize, height: imageSize, marginRight: 20, marginTop: 20, objectFit: 'contain', userSelect: 'none'}}/>
     ));
 
     return (

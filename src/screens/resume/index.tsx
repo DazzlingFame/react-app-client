@@ -63,6 +63,7 @@ export class Resume extends React.PureComponent<Props, State> {
 
     render() {
         const mainTexts: MainTexts = getLocalisedTexts(multiLanguageTexts.mainTexts, this.state.locale);
+        const contactsTexts = getLocalisedTexts(multiLanguageTexts.contactsTexts, this.state.locale);
 
         const headerLinks = this.getHeaderLinksConfig(mainTexts.headerLinks).map(item => (
             <div className={'header_link_container'} onClick={item.onClick} key={item.text}>
@@ -87,14 +88,14 @@ export class Resume extends React.PureComponent<Props, State> {
                     <p className={'bold_header_text'}>
                         {mainTexts.welcome}
                     </p>
-                    <div ref={this.workRef}>
-                        <WorkContent texts={getLocalisedTexts(multiLanguageTexts.workTexts, this.state.locale)}/>
-                    </div>
                     <div ref={this.aboutRef}>
                         <AboutContent texts={getLocalisedTexts(multiLanguageTexts.aboutTexts, this.state.locale)}/>
                     </div>
+                    <div ref={this.workRef}>
+                        <WorkContent texts={getLocalisedTexts(multiLanguageTexts.workTexts, this.state.locale)}/>
+                    </div>
                     <div ref={this.contactsRef}>
-                        <ContactCard/>
+                        <ContactCard texts={contactsTexts}/>
                     </div>
                 </div>
             </div>
