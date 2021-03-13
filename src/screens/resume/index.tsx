@@ -33,15 +33,21 @@ export class Resume extends React.PureComponent<Props, State> {
     }
 
     getHeaderLinksConfig = ({work, about, contacts}: HeaderLinksText) => ([
-        {text: work, onClick: () => {
-                this.workRef?.current && this.workRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-        }},
-        {text: about, onClick: () => {
+        {
+            text: about, onClick: () => {
                 this.aboutRef?.current && this.aboutRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-            }},
-        {text: contacts, onClick: () => {
+            }
+        },
+        {
+            text: work, onClick: () => {
+                this.workRef?.current && this.workRef.current.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+        },
+        {
+            text: contacts, onClick: () => {
                 this.contactsRef?.current && this.contactsRef.current.scrollIntoView({behavior: "smooth", block: "start"});
-            }},
+            }
+        },
     ]);
 
     onLanguageChanged = (pickedState: SelectorItem) => {
