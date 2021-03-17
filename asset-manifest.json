@@ -1,31 +1,36 @@
 {
   "files": {
-    "main.css": "/react-app-client/static/css/main.9f670908.chunk.css",
-    "main.js": "/react-app-client/static/js/main.bf7f208a.chunk.js",
-    "main.js.map": "/react-app-client/static/js/main.bf7f208a.chunk.js.map",
+    "main.css": "/react-app-client/static/css/main.cdc49c78.chunk.css",
+    "main.js": "/react-app-client/static/js/main.f713b169.chunk.js",
+    "main.js.map": "/react-app-client/static/js/main.f713b169.chunk.js.map",
     "runtime-main.js": "/react-app-client/static/js/runtime-main.be6c285e.js",
     "runtime-main.js.map": "/react-app-client/static/js/runtime-main.be6c285e.js.map",
-    "static/js/2.889bed52.chunk.js": "/react-app-client/static/js/2.889bed52.chunk.js",
-    "static/js/2.889bed52.chunk.js.map": "/react-app-client/static/js/2.889bed52.chunk.js.map",
+    "static/js/2.6462e798.chunk.js": "/react-app-client/static/js/2.6462e798.chunk.js",
+    "static/js/2.6462e798.chunk.js.map": "/react-app-client/static/js/2.6462e798.chunk.js.map",
     "index.html": "/react-app-client/index.html",
-    "precache-manifest.5604f1e5f6b22b1af72e4bbe4a0adaa1.js": "/react-app-client/precache-manifest.5604f1e5f6b22b1af72e4bbe4a0adaa1.js",
+    "precache-manifest.925e8dfee06f4bcb916c4b2c6de27397.js": "/react-app-client/precache-manifest.925e8dfee06f4bcb916c4b2c6de27397.js",
     "service-worker.js": "/react-app-client/service-worker.js",
-    "static/css/main.9f670908.chunk.css.map": "/react-app-client/static/css/main.9f670908.chunk.css.map",
-    "static/js/2.889bed52.chunk.js.LICENSE.txt": "/react-app-client/static/js/2.889bed52.chunk.js.LICENSE.txt",
+    "static/css/main.cdc49c78.chunk.css.map": "/react-app-client/static/css/main.cdc49c78.chunk.css.map",
+    "static/js/2.6462e798.chunk.js.LICENSE.txt": "/react-app-client/static/js/2.6462e798.chunk.js.LICENSE.txt",
     "static/media/font.css": "/react-app-client/static/media/Rubik-Regular.b3d0902b.ttf",
     "static/media/about-me-photo.jpg": "/react-app-client/static/media/about-me-photo.19e4a3ce.jpg",
+    "static/media/allure.jpg": "/react-app-client/static/media/allure.9f23d6ac.jpg",
     "static/media/bicycle-min.jpg": "/react-app-client/static/media/bicycle-min.17faafcf.jpg",
+    "static/media/checklist.png": "/react-app-client/static/media/checklist.939c3cc7.png",
+    "static/media/dlims-photo.png": "/react-app-client/static/media/dlims-photo.dfa258ea.png",
     "static/media/doge.jpg": "/react-app-client/static/media/doge.967012b8.jpg",
     "static/media/dogePillow.jpg": "/react-app-client/static/media/dogePillow.9de42fb7.jpg",
     "static/media/dogeSmiling.jpg": "/react-app-client/static/media/dogeSmiling.a36755e1.jpg",
+    "static/media/e2e-step-def.png": "/react-app-client/static/media/e2e-step-def.6d8bf3d9.png",
     "static/media/logo.svg": "/react-app-client/static/media/logo.5d5d9eef.svg",
+    "static/media/map-photo.png": "/react-app-client/static/media/map-photo.4f919aac.png",
     "static/media/shiva-min.jpg": "/react-app-client/static/media/shiva-min.fb680bba.jpg",
     "static/media/warhammer-min.jpg": "/react-app-client/static/media/warhammer-min.87baca84.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.be6c285e.js",
-    "static/js/2.889bed52.chunk.js",
-    "static/css/main.9f670908.chunk.css",
-    "static/js/main.bf7f208a.chunk.js"
+    "static/js/2.6462e798.chunk.js",
+    "static/css/main.cdc49c78.chunk.css",
+    "static/js/main.f713b169.chunk.js"
   ]
 }

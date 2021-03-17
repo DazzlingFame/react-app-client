@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e445c4420c00a1a38a1802a29282e8a",
+    "revision": "ee5187dcec20b441e2770e41a8e7eaac",
     "url": "/react-app-client/index.html"
   },
   {
-    "revision": "de2d65713a6925379814",
-    "url": "/react-app-client/static/css/main.9f670908.chunk.css"
+    "revision": "7ea9b51bfe9e445ba4c4",
+    "url": "/react-app-client/static/css/main.cdc49c78.chunk.css"
   },
   {
-    "revision": "022c3c4c3c3bbcb74e2d",
-    "url": "/react-app-client/static/js/2.889bed52.chunk.js"
+    "revision": "6f0b9e2784555751430b",
+    "url": "/react-app-client/static/js/2.6462e798.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/react-app-client/static/js/2.889bed52.chunk.js.LICENSE.txt"
+    "url": "/react-app-client/static/js/2.6462e798.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de2d65713a6925379814",
-    "url": "/react-app-client/static/js/main.bf7f208a.chunk.js"
+    "revision": "7ea9b51bfe9e445ba4c4",
+    "url": "/react-app-client/static/js/main.f713b169.chunk.js"
   },
   {
     "revision": "73867ff6bf036032c31e",
@@ -40,8 +40,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app-client/static/media/about-me-photo.19e4a3ce.jpg"
   },
   {
+    "revision": "9f23d6acf368d8459805737d1e869171",
+    "url": "/react-app-client/static/media/allure.9f23d6ac.jpg"
+  },
+  {
     "revision": "17faafcf708b692d32f43915dca5949d",
     "url": "/react-app-client/static/media/bicycle-min.17faafcf.jpg"
+  },
+  {
+    "revision": "939c3cc7b30b67b6000a36071b3dab41",
+    "url": "/react-app-client/static/media/checklist.939c3cc7.png"
+  },
+  {
+    "revision": "dfa258ea3ee190ab12924cfadb4f49e5",
+    "url": "/react-app-client/static/media/dlims-photo.dfa258ea.png"
   },
   {
     "revision": "967012b85371221f95dd6a0d81769d5d",
@@ -56,8 +68,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app-client/static/media/dogeSmiling.a36755e1.jpg"
   },
   {
+    "revision": "6d8bf3d9128fc3c884f194aed5a5fde1",
+    "url": "/react-app-client/static/media/e2e-step-def.6d8bf3d9.png"
+  },
+  {
     "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
     "url": "/react-app-client/static/media/logo.5d5d9eef.svg"
+  },
+  {
+    "revision": "4f919aacb91dc4d9e4818bac75fb405f",
+    "url": "/react-app-client/static/media/map-photo.4f919aac.png"
   },
   {
     "revision": "fb680bba9876d99c852a88fd02fd136d",
