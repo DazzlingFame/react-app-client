@@ -1,8 +1,9 @@
 import React from "react";
 import './imageTextHeaderStyles.css'
+import {ImageSource} from "../../screens/resume/constants";
 
 type PropsType = {
-    imageSource: string;
+    imageSource: ImageSource;
     header?: string;
     text: string;
 }
@@ -15,7 +16,7 @@ export const ImageTextHeader: React.FC<PropsType> = (props: PropsType) => {
     ));
     return (
         <div className={'header_container'}>
-            <img src={props.imageSource} alt={'doge'} className={'logo'}/>
+            <img src={props.imageSource.source} alt={props.imageSource.desc} className={'logo'} />
             <div style={{flexDirection: 'column'}}>
                 {props.header && (
                     <text className={'small_text image_header_text'}> {props.header} <br/></text>

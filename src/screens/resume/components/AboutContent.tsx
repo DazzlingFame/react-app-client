@@ -1,7 +1,7 @@
 import '../resumeScreenStyles.css'
 import * as React from "react";
 import {ImageTextHeader} from "../../../components/imageTextHeader";
-import {ABOUT_ME_IMG, BICYCLE_IMG, SHIVA_IMG, WARHAMMER_IMG} from "../constants";
+import {Images} from "../constants";
 
 export type AboutTexts = {
     sectionName: string,
@@ -13,7 +13,7 @@ type Props = {
     texts: AboutTexts;
 }
 
-const photosArray = [BICYCLE_IMG, WARHAMMER_IMG, SHIVA_IMG];
+const photosArray = [Images.BICYCLE_IMG, Images.WARHAMMER_IMG, Images.SHIVA_IMG];
 
 const AboutContent: React.FC<Props> = props => {
     const photos = photosArray.map(photo => (
@@ -24,7 +24,7 @@ const AboutContent: React.FC<Props> = props => {
             <p className={'bold_subheader_text'}>
                 {props.texts.sectionName}
             </p>
-            <ImageTextHeader header={props.texts.header} text={props.texts.text} imageSource={ABOUT_ME_IMG.source}/>
+            <ImageTextHeader header={props.texts.header} text={props.texts.text} imageSource={Images.ABOUT_ME_IMG}/>
             <div className="flat_photo__container">
                 {photos}
             </div>

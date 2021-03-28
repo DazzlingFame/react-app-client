@@ -1,12 +1,9 @@
 import React from "react";
-import dogePillow from '../../../../../assets/images/dogePillow.jpg';
 import '../../../resumeScreenStyles.css';
 import './WorkBlock.css'
-import {WorkBlockTexts} from "../../../constants";
+import {Images, WorkBlockTexts} from "../../../constants";
 import {ImageTextHeader} from "../../../../../components/imageTextHeader";
 import {getWidth} from "../../../../../utils/global";
-
-
 
 type Props = {
     texts: WorkBlockTexts;
@@ -23,7 +20,7 @@ const WorkBlock: React.FC<Props> = props => {
 
     return (
         <div className={'work_block_container'}>
-            <ImageTextHeader imageSource={dogePillow} text={props.texts.mainData + '\n' + props.texts.skills} />
+            <ImageTextHeader imageSource={Images.WORK_ME_IMG} text={props.texts.mainData + '\n' + props.texts.skills} />
             <div className={'work_block_photos_container'}>
                 {photos}
             </div>

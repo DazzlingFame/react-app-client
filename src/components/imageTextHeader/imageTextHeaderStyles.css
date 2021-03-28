@@ -9,7 +9,7 @@
     width: 200px;
     height: 200px;
     margin-right: 5%;
-    object-fit: initial;
+    object-fit: cover;
     border-radius: 99em;
 }
 

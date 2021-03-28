@@ -1,5 +1,5 @@
 import React from "react";
-import {ContactsTexts, DOGE_SMILING_IMG, PHONE_LOGO, TELEGRAM_LOGO, VK_LOGO} from "../constants";
+import {ContactsTexts, Images} from "../constants";
 import './ContactCard.css';
 import '../resumeScreenStyles.css';
 
@@ -12,19 +12,20 @@ type Contact = {
 const contactsArray: Contact[] = [
     {
         type: 'link',
-        img: TELEGRAM_LOGO.source,
+        img: Images.TELEGRAM_LOGO.source,
         text: 'DazzlingFame',
         link: 'https://t.me/DazzlingFame',
     },
     {
-        type: 'text',
-        img: PHONE_LOGO.source,
-        text: '+7(977)882-01-26'
+        type: 'link',
+        img: Images.PHONE_LOGO.source,
+        text: '+7(977)882-01-26',
+        link: 'tel:+7977-882-0126'
     },
     {
         text: 'Dazzling Fame',
         type: 'link',
-        img: VK_LOGO.source,
+        img: Images.VK_LOGO.source,
         link: 'https://vk.com/dazzling_fame'
     }
 ];
@@ -57,7 +58,7 @@ const ContactCard: React.FC<Props> = ({texts}) => {
             </p>
         <div className="contact_card__container">
             <div className="contact_card__block_container">
-                <img src={DOGE_SMILING_IMG.source} alt="contact_photo" className="contact_photo"/>
+                <img src={Images.CONTACTS_ME.source} alt="contact_photo" className="contact_photo"/>
                 <text className="regular_text contact_name">{texts.name}</text>
             </div>
             <div className="contact_card__block_container">

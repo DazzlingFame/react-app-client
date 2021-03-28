@@ -1,12 +1,11 @@
 import {AboutTexts} from "./components/AboutContent";
 import {TextWithTranslation} from "../../utils/localisation";
 
-import logo from '../../assets/images/doge.jpg'
 import allure from '../../assets/images/allure.jpg'
-import checklist from '../../assets/images/checklist.png'
 import smilingDoge from '../../assets/images/dogeSmiling.jpg'
-import dogePillow from '../../assets/images/dogePillow.jpg'
 import aboutMePhoto from '../../assets/images/about-me-photo.jpg'
+import workPhoto from '../../assets/images/work-photo.jpg'
+import contactsPhoto from '../../assets/images/contacts-photo.jpg'
 import shivaPhoto from '../../assets/images/shiva-min.jpg'
 import warhammerPhoto from '../../assets/images/warhammer-min.jpg'
 import bicyclePhoto from '../../assets/images/bicycle-min.jpg'
@@ -17,55 +16,50 @@ import ordersMapPhoto from '../../assets/images/map-photo.png'
 import dlims from '../../assets/images/dlims-photo.png'
 import e2eStep from '../../assets/images/e2e-step-def.png'
 
-type ImageSource = {
+export type ImageSource = {
     source: string;
     desc: string;
 }
 
-export const DOGE_IMG: ImageSource = {
-    source: logo, desc: 'doge'
-};
-export const DOGE_SMILING_IMG: ImageSource = {
-    source: smilingDoge, desc: 'smilingDoge'
-};
-export const ALLURE_IMG: ImageSource = {
-    source: allure, desc: 'allure'
-};
-export const E2E_STEP_IMG: ImageSource = {
-    source: e2eStep, desc: 'e2eStep'
-};
-export const CHECKLIST_IMG: ImageSource = {
-    source: checklist, desc: 'checklist'
-};
-export const DOGE_PILLOW_IMG: ImageSource = {
-    source: dogePillow, desc: 'dogePillow'
-};
-export const ORDERS_MAP_IMG: ImageSource = {
-    source: ordersMapPhoto, desc: 'ordersMap'
-};
-export const DLIMS_IMG: ImageSource = {
-    source: dlims, desc: 'subscriptions'
-};
-export const ABOUT_ME_IMG: ImageSource = {
-    source: aboutMePhoto, desc: 'aboutMePhoto'
-};
-export const SHIVA_IMG: ImageSource = {
-    source: shivaPhoto, desc: 'shiva'
-};
-export const WARHAMMER_IMG: ImageSource = {
-    source: warhammerPhoto, desc: 'warhammer'
-};
-export const BICYCLE_IMG: ImageSource = {
-    source: bicyclePhoto, desc: 'bicycle'
-};
-export const VK_LOGO: ImageSource = {
-    source: vkLogo, desc: 'vk_logo'
-};
-export const TELEGRAM_LOGO: ImageSource = {
-    source: telegramLogo, desc: 'telegram_logo'
-};
-export const PHONE_LOGO: ImageSource = {
-    source: phoneLogo, desc: 'phone_logo'
+export const Images: Record<string, ImageSource> = {
+    DOGE_SMILING_IMG: {
+        source: smilingDoge, desc: 'smilingDoge'
+    },
+    ALLURE_IMG: {
+        source: allure, desc: 'allure'
+    },
+    E2E_STEP_IMG: {
+        source: e2eStep, desc: 'e2eStep'
+    },
+    ORDERS_MAP_IMG: {
+        source: ordersMapPhoto, desc: 'ordersMap'
+    },
+    DLIMS_IMG: {
+        source: dlims, desc: 'subscriptions'
+    },
+    ABOUT_ME_IMG: {
+        source: aboutMePhoto, desc: 'aboutMePhoto'
+    },
+    WORK_ME_IMG: {
+        source: workPhoto, desc: 'workMePhoto'
+    },
+    CONTACTS_ME: {
+        source: contactsPhoto, desc: 'contactsMePhoto'
+    },
+    SHIVA_IMG: {
+        source: shivaPhoto, desc: 'shiva'
+    },
+    WARHAMMER_IMG: {
+        source: warhammerPhoto, desc: 'warhammer'
+    },
+    BICYCLE_IMG: {source:bicyclePhoto , desc: 'bicycle'
+    },
+    VK_LOGO: {source: vkLogo, desc: 'vk_logo'
+    },
+    TELEGRAM_LOGO: {source: telegramLogo, desc: 'telegram_logo'
+    },
+    PHONE_LOGO: {source: phoneLogo, desc: 'phone_logo'
+    },
 };
 
 export type HeaderLinksText = {
@@ -127,10 +121,10 @@ export const multiLanguageTexts: MultiLanguageTexts = {
     },
     aboutTexts: {
         en: {
-            sectionName: 'About',
+            sectionName: 'About me',
             header: 'Hi, I’m Viacheslav Kolesnikov.',
             text: 'Currently I am a FrontEnd developer in the PROFI.RU customer service team. In my career, I went from a junior tester to Senior QA, and then,' +
-                ' changing the track, became a React-Native and React developer. \ n' +
+                ' changing the track, became a React-Native and React developer. \n' +
                 'I graduated from the "Research University of Moscow Institute of Electronic Technology"' +
                 ' with a degree in Software Engineering. It was very interesting to study, we had courses on DBMS, software testing, algorithms, OOP and design patterns that' +
                 ' really came in handy in my work. I love sports, cycling in the summer and snowboarding in the winter, it helps to keep fit and unload my head during hard work' +
@@ -139,7 +133,8 @@ export const multiLanguageTexts: MultiLanguageTexts = {
             sectionName: 'Обо мне',
             header: 'Привет, я Вячеслав Колесников.',
             text: 'В текущий момент я FrontEnd разработчик в команде клиентского сервиса PROFI.RU. В своей карьере я прошел путь от младшего специалиста ' +
-                'по тестированию до Senior QA, а затем, сменив рельс, стал React-Native и React разработчиком. \nЯ закончил "Научно исследовательский университет Московский Институт Электронной ' +
+                'по тестированию до Senior QA, а затем, сменив рельс, стал React-Native и React разработчиком. \n' +
+                'Я закончил "Научно исследовательский университет Московский Институт Электронной ' +
                 'Техники" по специальности "Программная инженерия. Учиться было очень интересно, у нас были курсы по СУБД, тестированию ПО, алгоритмам, ООП и паттернам проектирования, которые ' +
                 'реально пригодились мне в работе.\n' +
                 'В свободное время я люблю заниматься спортом, велосипедом летом и сноубордом зимой, это помогает поддерживать себя в форме и разгрузить голову в тяжелые рабочие дни. Так же я ' +
